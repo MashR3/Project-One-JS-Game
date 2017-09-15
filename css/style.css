@@ -1,0 +1,25 @@
+body {
+	background-image: ;
+}
+
+#instcont {
+	background-color: #13843b;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 800px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+#title {
+	background-color: rgba(0, 188, 212, 0.9);
+	border: solid red 4px;
+	height: 90px;
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 50px;
+    border-radius: 20px;
+
+
+}
