@@ -1,25 +1,119 @@
 body {
-	background-image: ;
+	background-image: url(../images/bg3.jpeg);
+	background-size: cover;
 }
+
 
 #instcont {
 	background-color: #13843b;
 	border: solid red 4px;
 	border-radius: 50px;
-	height: 800px;
+	height: 620px;
 	width: 1000px;
 	margin: 0 auto;
+	margin-top: 44px;
 }
 
-
 #title {
-	background-color: rgba(0, 188, 212, 0.9);
+	/*background-color: rgba(170, 194, 197, 0.9);*/
 	border: solid red 4px;
-	height: 90px;
+	height: 66px;
 	width: 700px;
 	margin: 0 auto;
 	margin-top: 50px;
     border-radius: 20px;
 
+}
+
+#inst {
+	border: solid red 4px;
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    vertical-align: top;
+    position: relative;
+}
+
+#go {
+	border: solid red 4px;
+    height: 50px;
+    width: 481px;
+    position: absolute;
+    top: 314px;
+    left: 55px;
+}
+
+#piccont {
+	left: 672px;
+    border: solid red 4px;
+    top: 173px;
+    margin: 0 auto;
+    height: 500px;
+    width: 330px;
+    display: inline-block;
+}
+
+.fpic {
+	border: solid red 4px;
+	position: inline-block;
+	height: 150px;
+    width: 323px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+ /*PAGE TWO CSS*/
+
+
+#levelone {
+	background-color: #13843b;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 44px;
+	margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+#clue {
+	border: solid red 4px;
+	margin: 0 auto;
+    margin-top: 14px;
+	height: 60px;
+	width: 700px;
+	margin-bottom: 14px;
+
+}
+
+#board {
+	border: solid red 4px;
+	margin: 0 auto;
+	height: 500px;
+	width: 949px;
+	border-radius: 35px;
+}
+.button1 {
+	border: solid red 4px;
+	margin: 0 auto;
+	height: 110px;
+	width: 110px;
+}
+
+
+
+
