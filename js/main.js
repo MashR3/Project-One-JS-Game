@@ -1,14 +1,14 @@
 $(function (){
 
-var $alpha = $('#alpha');
-var $beta = $('#beta');
+var $alpha = $('.correct');
+var $beta = $('.incorrect');
 // var pcount = 0;
 // var ccount = 0;
 var $gameScore = 0;
 var level = 0;
 var $scoreDigit = $('#score');
 
-$('#alpha').one('click', function(event){
+$('.correct').one('click', function(event){
 	$(this).css({
 		backgroundColor:'#2bce2b'
 	})
@@ -20,11 +20,11 @@ $('#alpha').one('click', function(event){
 
 
 
-$('#beta').one('click', function(event){
+$('.incorrect').one('click', function(event){
 	$(this).css({
 		backgroundColor: 'red'
 	})
-	$gameScore = $gameScore - 1
+	$gameScore = $gameScore - 1;
 	displayScore();
 	// ccount++;
 	console.log($gameScore);
@@ -34,6 +34,27 @@ $('#beta').one('click', function(event){
 
 function displayScore () {
 	$scoreDigit.html($gameScore);
+}
+
+
+
+
+
+
+var intval = null;
+var pos = 0;
+
+$(document).ready(function() {
+
+
+    intval = window.setInterval(moveBg, 50);
+});
+
+function moveBg() {
+    
+    pos++;
+    
+    $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
 }
 
 
@@ -64,9 +85,13 @@ function displayScore () {
 
 // pProgress();
 
+            
+function run () {           
+    $(".page").animate({ left: "+=100px" }, 2000);
+    $(".page").animate({ left: "-=100px" }, 2000, run); // call run again
+}
 
-
-
+run();             
 
 
 
