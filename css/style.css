@@ -97,8 +97,44 @@ body {
 	height: 60px;
 	width: 700px;
 	margin-bottom: 14px;
+	display: inline-block;
+	margin-right: 15px;
+    margin-left: 15px;
 
 }
+
+#score {
+	border: solid red 4px;
+	display: inline-block;
+	height: 61px;
+	width: 61px;
+	margin: 0 auto;
+	/*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 50px;
+    vertical-align: top;
+    font-family: fantasy;
+    text-align: center;
+}
+
+#compscore {
+	border: solid red 4px;
+	display: inline-block;
+	height: 61px;
+	width: 61px;
+	margin: 0 auto;
+	margin-left: 60px;
+    /*margin-right: 10px;*/
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 50px;
+    vertical-align: top;
+    font-family: fantasy;
+    text-align: center;
+}
+
 
 #board {
 	border: solid red 4px;
