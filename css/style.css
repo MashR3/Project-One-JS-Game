@@ -95,6 +95,7 @@ body {
 	margin-top: 44px;
 	margin-top: 200px;
     margin-bottom: 200px;
+    /*position: absolute;*/
 }
 
 #clue {
@@ -117,14 +118,17 @@ body {
 	height: 61px;
 	width: 61px;
 	margin: 0 auto;
-	/*margin-left: 10px;*/
-    /*margin-right: 10px;*/
+	margin-left: 15px;
+    margin-right: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
     font-size: 50px;
     vertical-align: top;
     font-family: fantasy;
     text-align: center;
+    margin-top: 23px;
+    background-color: antiquewhite;
+    border-radius: 50%;
 }
 
 #compscore {
@@ -153,7 +157,7 @@ body {
 	margin-top: 13px;
 }
 .button1 {
-	border: solid red 4px;
+	border: solid #d9c4c4 4px;
 	border-radius: 15px;
 	display: inline-block;
 	background-color: antiqueWhite; 
@@ -167,25 +171,27 @@ body {
 	letter-spacing: 2px;
 	font-weight: 900;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	vertical-align: top;
 }
 
 .mbprog {
 	border: solid #90a0a2 4px;
 	margin: 0 auto;
 	height: 40px;
-	width: 750px;
+	width: 800px;
 	border-radius: 50px;
 	background: beige;
-	margin-top: 15px;
+	margin-top: 75px;
 	text-align: center;
 	font-size: 50px;
 }
 
 .prog {
 	height: 40px;
-    width: 40px;
+    width: 0px;
+   	background-color: #4ed453;
     border-radius: 50px;
-    background-color: #0058ff;
+    /*background-color: #0058ff;*/
 
 }
 
