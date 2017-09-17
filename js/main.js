@@ -1,10 +1,10 @@
 $(function (){
 
 var $gameScore = 0;
-var level = 0;
+// var level = 0;
 var $scoreDigit = $('#score');
 var $prog = $('.prog');
-var $death = $('#board');
+var $death = $('#levelone');
 
 
 $('.correct').one('click', function(event){
@@ -17,8 +17,11 @@ $('.correct').one('click', function(event){
 	displayScore();
 });
 
-$('.correct').click(function(event){ $prog.animate({ width:'+=100px'})
+$('.correct').on('click', function(event){$prog.animate({ width:'+=100px'})
 	})
+
+
+
 
 
 
@@ -53,35 +56,53 @@ $('.neutral').one('click', function(event){
 
 
 $('.death').one('click', function(event){
-	// $death === .backgroundColor 'red'
-
 	$(this).css({
 		borderColor: 'white',
 		backgroundColor: 'black',
-		color: '#ce9d43'
-		// checkDeath();
+		color: 'white'
 	})
+	death();
 })
 
 
 
 
 
-
-
+// FUNCTIONS 
 
 function displayScore () {
 	$scoreDigit.html($gameScore);
-	$scoreDigit.css({
+
+	if ((parseInt($gameScore)) > 0) {
+		$scoreDigit.css({
 		backgroundColor: '#4ed453'
-	})
+		})
+
+	} else if ((parseInt($gameScore)) < 0) {
+		$scoreDigit.css({
+		backgroundColor: 'red'
+		})
+
+	} else {
+		$scoreDigit.css({
+		backgroundColor: 'antiquewhite'
+		})
+
+	}
 }
 
 
-function checkDeath () {
-	clearInterval($death) 
+function death () {
+	$('#levelone').fadeOut(2000, function(){
+    var div = $("<div id='death-screen'>'</div>").hide(1000000);
+    $(this).replaceWith(div);
+    $('levelone').fadeIn('slow');
+	});
 
 }
+
+
+
 
 
 

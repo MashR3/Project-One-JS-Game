@@ -22,7 +22,6 @@ body {
 }
 
 #title {
-	/*background-color: rgba(170, 194, 197, 0.9);*/
 	border: solid red 4px;
 	height: 66px;
 	width: 700px;
@@ -95,7 +94,6 @@ body {
 	margin-top: 44px;
 	margin-top: 200px;
     margin-bottom: 200px;
-    /*position: absolute;*/
 }
 
 #clue {
@@ -130,7 +128,7 @@ body {
     border-radius: 50%;
 }
 
-#compscore {
+#token {
 	background-image: url(../images/turtmad.png);
 	background-color: #00aeef;
 	background-size: cover;
@@ -192,8 +190,23 @@ body {
     width: 0px;
    	background-color: #4ed453;
     border-radius: 50px;
-    /*background-color: #0058ff;*/
+}
+
+
+
+
+#death-screen {
+	background-color: red;
+	border: solid black 4px;
+	border-radius: 50px;
+	height: 755px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 44px;
+	margin-top: 200px;
+    margin-bottom: 200px;
 
 }
+
 
 
