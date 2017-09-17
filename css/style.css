@@ -98,7 +98,7 @@ body {
 }
 
 #clue {
-	border: solid red 4px;
+	border: solid #673ab7 8px;
 	margin: 0 auto;
     margin-top: 14px;
 	height: 60px;
@@ -107,6 +107,7 @@ body {
 	display: inline-block;
 	margin-right: 15px;
     margin-left: 15px;
+    background-color: #1d0d5a;
 
 }
 
@@ -144,21 +145,28 @@ body {
 
 
 #board {
-	border: solid red 4px;
+	border: solid transparent 4px;
 	margin: 0 auto;
-	height: 500px;
-	width: 949px;
+	height: 426px;
+	width: 946px;
 	border-radius: 35px;
+	margin-top: 13px;
 }
 .button1 {
 	border: solid red 4px;
 	border-radius: 15px;
+	display: inline-block;
 	background-color: antiqueWhite; 
 	margin: 0 auto;
-	padding-top: 20px;
+	margin-bottom: 6px;
+	margin-right: 3px;
+	padding-top: 27px;
 	text-align: center;
-	height: 40px;
-	width: 150px;
+	height: 43px;
+	width: 175px;
+	letter-spacing: 2px;
+	font-weight: 900;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .mbprog {
