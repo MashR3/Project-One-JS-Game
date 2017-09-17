@@ -101,7 +101,7 @@ body {
 #clue {
 	border: solid #673ab7 8px;
 	margin: 0 auto;
-    margin-top: 14px;
+    margin-top: 22px;
 	height: 60px;
 	width: 700px;
 	margin-bottom: 14px;
@@ -113,18 +113,17 @@ body {
 }
 
 #score {
-	border: solid red 4px;
+	border: solid black 4px;
 	display: inline-block;
 	height: 61px;
-	width: 61px;
+	width: 67px;
+	padding-top: 4px;
 	margin: 0 auto;
-	margin-left: 15px;
     margin-right: 10px;
-    margin-top: 14px;
     margin-bottom: 14px;
-    font-size: 50px;
+    font-size: 49px;
     vertical-align: top;
-    font-family: fantasy;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     text-align: center;
     margin-top: 23px;
     background-color: antiquewhite;
@@ -132,18 +131,20 @@ body {
 }
 
 #compscore {
-	border: solid red 4px;
+	background-image: url(../images/turtmad.png);
+	background-color: #00aeef;
+	background-size: cover;
+	border: solid black 4px;
 	display: inline-block;
-	height: 61px;
-	width: 61px;
+	height: 66px;
+	width: 64px;
 	margin: 0 auto;
 	margin-left: 60px;
-    /*margin-right: 10px;*/
-    margin-top: 14px;
+    margin-top: 22px;
     margin-bottom: 14px;
     font-size: 50px;
     vertical-align: top;
-    font-family: fantasy;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
     text-align: center;
 }
 
@@ -177,17 +178,17 @@ body {
 .mbprog {
 	border: solid #90a0a2 4px;
 	margin: 0 auto;
-	height: 40px;
-	width: 800px;
+	height: 30px;
+	width: 900px;
 	border-radius: 50px;
 	background: beige;
-	margin-top: 75px;
+	margin-top: 25px;
 	text-align: center;
 	font-size: 50px;
 }
 
 .prog {
-	height: 40px;
+	height: 30px;
     width: 0px;
    	background-color: #4ed453;
     border-radius: 50px;

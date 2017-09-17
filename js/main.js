@@ -6,22 +6,19 @@ var $scoreDigit = $('#score');
 var $prog = $('.prog');
 var $death = $('#board');
 
-$('.correct').on('click', function(event){
+
+$('.correct').one('click', function(event){
 	$(this).css({
 		borderColor: '#010d01',
 		backgroundColor:'#4ed453'
 	})
-	
 
 	$gameScore = $gameScore + 1;
 	displayScore();
-
-
 });
 
-$('#c1, #c2').on('click', progress());
-
-
+$('.correct').click(function(event){ $prog.animate({ width:'+=100px'})
+	})
 
 
 
@@ -51,6 +48,10 @@ $('.neutral').one('click', function(event){
 })
 
 
+
+
+
+
 $('.death').one('click', function(event){
 	// $death === .backgroundColor 'red'
 
@@ -62,8 +63,18 @@ $('.death').one('click', function(event){
 	})
 })
 
+
+
+
+
+
+
+
 function displayScore () {
 	$scoreDigit.html($gameScore);
+	$scoreDigit.css({
+		backgroundColor: '#4ed453'
+	})
 }
 
 
@@ -72,12 +83,7 @@ function checkDeath () {
 
 }
 
-function progress() {
-	// $('.correct').onclick(function(event){
-		$prog === width ==='+100px',
-	
-	// })
-}
+
 
 
 // MOVING BACKGROUND
@@ -97,7 +103,7 @@ function progress() {
     
 //     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
 // }
- //
+ 
 
 
 
