@@ -10,6 +10,40 @@ p {
     text-align: justify;
 }
 
+h6 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: white;
+	border: solid black 3px;
+	color: black;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 15px;
+    padding-left: 5px;
+}
+
+#pic1 {
+	background-image: url(../images/cluepic.jpg);
+	background-size: cover;
+	height: 158px;
+}
+
+#pic2 {
+	background-image: url(../images/endturnscore.jpg);
+	background-size: contain;
+	height: 40px;
+    padding-top: 101px;
+}
+
+#pic3 {
+	background-image: url(../images/redbar.jpg);
+	background-size: contain;
+
+}
+
+#rbarh6 {
+	position: absolute;
+    right: 29px;
+}
 
 .page {
 	background-image: url(../images/riv.png);
@@ -47,7 +81,7 @@ p {
 }
 
 #inst {
-	border: solid red 4px;
+	border: solid black 4px;
     height: 567px;
     width: 600px;
     margin: 0 auto;
@@ -71,7 +105,7 @@ p {
     margin-top: 12px;
 }
 
-#go {
+#startgame {
 	border: solid black 4px;
     height: 50px;
     width: 481px;
@@ -88,11 +122,11 @@ p {
 
 #piccont {
 	left: 672px;
-    border: solid red 4px;
+    /*border: solid red 4px;*/
     top: 173px;
     margin: 0 auto;
     height: 615px;
-    width: 330px;
+    width: 340px;
     display: inline-block;
 }
 
@@ -100,7 +134,7 @@ p {
 	border: solid red 4px;
 	position: inline-block;
 	height: 150px;
-    width: 323px;
+    width: 335px;
 
 }
 

@@ -1,8 +1,8 @@
 $(function (){
 
-var introScreen = $('#instcont').hide();
+var introScreen = $('#instcont').show();
 var endScreen = $('#death-screen').hide();
-// var oneScreen = $('#levelone').hide();
+var oneScreen = $('#levelone').hide();
 
 var $gameScore = 0;
 // var level = 0;
@@ -82,22 +82,26 @@ $('.death').one('click', function(event){
 	death();
 	dScreenScore();
 })
-// --------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
 $('#endturn').on('click', function(event){
 	compAdvance();
 	clueChoose();
 })
-// --------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
-$('#restart').one('click', function(event){
-		var introScreen = $('#instcont').show();
-	    var oneScreen = $('#levelone').hide();
-		var endScreen = $('#death-screen').hide();
+$('#restart').on('click', function(event){
+	var introScreen = $('#instcont').show();
+	var oneScreen = $('#levelone').hide();
+	var endScreen = $('#death-screen').hide();
 })
+// ---------------------------------------------------------------------------------------------------------------
 
-
-
+$('#startgame').on('click', function(){
+	var introScreen = $('#instcont').hide();
+	var oneScreen = $('#levelone').show();
+	var endScreen = $('#death-screen').hide();
+})
 // ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
 
 function displayScore () {
