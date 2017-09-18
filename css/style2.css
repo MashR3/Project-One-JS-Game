@@ -8,9 +8,6 @@
 	height: 755px;
 	width: 1000px;
 	margin: 0 auto;
-	margin-top: 44px;
-	margin-top: 200px;
-    margin-bottom: 200px;
 }
 
 #clue {
@@ -143,8 +140,10 @@
 }
 
 #turt {
+	position: fixed;
 	height: 56px;
 	width: 56px;
+	margin-bottom: 114px;
 	margin-left: 185px;
 	margin-top: 5px;
 	display: inline-block;
@@ -153,9 +152,11 @@
 }
 
 #crab {
+	position: fixed;
 	height: 61px;
 	width: 80px;
-	margin-left: 395px;
+	margin-bottom: 121px;
+	margin-left: 663px;
 	display: inline-block;
 	background-image: url(../images/crabrf.png);
 	background-size: cover;
@@ -180,30 +181,15 @@
     border-radius: 50px;
 }
 
-@keyframes bounce {
-  from, 20%, 53%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
-  }
-
-  40%, 43% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -30px, 0);
-  }
-
-  70% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -15px, 0);
-  }
-
-  90% {
-    transform: translate3d(0,-4px,0);
-  }
+.bounce {
+  -webkit-animation:bounce 1s infinite;
 }
 
-.bounce {
-  animation-name: bounce;
-  transform-origin: center bottom;
+@-webkit-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:15px; }
+  50%      { bottom:20px; }
+  100%     { bottom:0; }
 }
 
 

@@ -1,6 +1,6 @@
 $(function (){
 
-
+var introScreen = $('#instcont').hide();
 var endScreen = $('#death-screen').hide();
 // var oneScreen = $('#levelone').hide();
 
@@ -161,25 +161,22 @@ function compAdvance () {
 
 // MOVING BACKGROUND
 
-// var intval = null;
-// var pos = 0;
+var intval = null;
+var pos = 0;
 
-// $(document).ready(function() {
+$(document).ready(function() {
 
 
-//     intval = window.setInterval(moveBg, 50);
-// });
+    intval = window.setInterval(moveBg, 20);
+});
 
-// function moveBg() {
+function moveBg() {
     
-//     pos++;
+    pos++;
     
-//     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
-// }
+    $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
+}
  
-
-
-
 
 
 });
