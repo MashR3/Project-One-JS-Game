@@ -15,13 +15,14 @@
 }
 
 #dmessage {
-	border: solid black 4px;
+	/*border: solid black 4px;*/
 	height: 150px;
 	width: 992px;
 	display: inline-block;
 }
 
 #deadturt {
+	border: solid #040404 9px;
 	background-image: url(../images/turtdead.png);
     background-size: cover;
     height: 410px;
@@ -34,7 +35,7 @@
 #dbuttons {
 	height: 150px;
     width: 993px;
-    border: solid black 4px;
+    /*border: solid black 4px;*/
     margin-top: 0px;
 
 }
@@ -48,15 +49,30 @@
 }
 
 #dscore {
-    height: 110px;
-    width: 500px;
-	border: solid red 4px;
+    height: 57px;
+    width: 550px;
+	/*border: solid red 4px;*/
 	display: inline-block;
+	vertical-align: middle;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 46px;
+    color: burlywood;
+    padding-top: 0px;
+    padding-left: 63px;
+    margin-bottom: 63px;
+    margin-right: 43px;
 }
 
 #restart {
-    height: 110px;
+    height: 62px;
     width: 200px;
-	border: solid red 4px;
+	border: solid black 4px;
 	display: inline-block;
+	margin-top: 30px;
+	background-color: #d9cb63;
+	vertical-align: text-bottom;
+    font-size: 40px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding-left: 43px;
+    padding-top: 15px;
 }
