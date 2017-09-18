@@ -7,10 +7,16 @@ var $prog = $('.prog');
 var $comprog = $('.comprog');
 var $death = $('#levelone');
 
-
+var lOneArray = [
+	'Death: 2',
+	'Toolbox: 1',
+	'Vibrate: 2'
+];
 
 
 clueChoose();
+
+$('#clue').html(clueChoose());
 
 $('.correct').one('click', function(event){
 	$(this).css({
@@ -46,12 +52,6 @@ $('.incorrect').on('click', function(event){$comprog.animate({ width:'+=100px'})
 	})
 
 
-	// $smallSquare
-	// 	.fadeOut(200)
-	// 	.delay(50)
-	// 	.fadeIn(100)
-	// 	.setInterval(50);
-
 
 $('.neutral').one('click', function(event){
 	$(this).css({
@@ -59,10 +59,6 @@ $('.neutral').one('click', function(event){
 		backgroundColor: '#e9bc80'
 	})
 })
-
-
-
-
 
 
 $('.death').one('click', function(event){
@@ -74,6 +70,10 @@ $('.death').one('click', function(event){
 	death();
 	dScreenScore();
 })
+
+
+// $('#endturn').on('click', function(event){$comprog.animate({ width:'+=100px'})
+// 	})
 
 
 
@@ -98,7 +98,6 @@ function displayScore () {
 		$scoreDigit.css({
 		backgroundColor: 'antiquewhite'
 		})
-
 	}
 }
 // ------------------------------------------------------------------------------------------------------------
@@ -115,37 +114,20 @@ function dScreenScore () {
 }
 // -------------------------------------------------------------------------------------------------------------
 function clueChoose () {
-	$('#clue').html('src', levelOneArray[randomClue]);
+	var randClue = Math.floor(Math.random()*lOneArray.length);
+	var returnClue = lOneArray[randClue];
+	lOneArray.splice(randClue, 1);
+	return returnClue
 }
-
-$
-
-var lOneArray = [
-	'Death: 2',
-	'Toolbox: 1',
-	'Vibrate: 2'
-];
-
-var randomClue = Math.floor(Math.random()*lOneArray.length);
-
-audioElement.setAttribute('src', lOneArray[randomClue]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// --------------------------------------------------------------------------------------------------------------
 function compAdvance () {
+	var $ele = $('.incorrect');
+	$ele.eq(Math.floor(Math.random()*($ele.length - 1))).attr('id');
+	$comprog.animate({ width:'+=100px'});
 
 }
+
+
 
 
 
