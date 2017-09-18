@@ -76,3 +76,8 @@
     padding-left: 43px;
     padding-top: 15px;
 }
+
+#linkstyle {
+	color: #ff0344;
+	text-decoration: none;
+}

@@ -16,7 +16,7 @@ body {
 	background-color: #1c5a4d;
 	border: solid red 4px;
 	border-radius: 50px;
-	height: 620px;
+	height: 755px;
 	width: 1000px;
 	margin: 0 auto;
 	margin-top: 44px;
@@ -34,7 +34,7 @@ body {
 
 #inst {
 	border: solid red 4px;
-    height: 400px;
+    height: 551px;
     width: 600px;
     margin: 0 auto;
     display: inline-block;
@@ -50,7 +50,7 @@ body {
     height: 50px;
     width: 481px;
     position: absolute;
-    top: 314px;
+    top: 473px;
     left: 55px;
 }
 
@@ -59,7 +59,7 @@ body {
     border: solid red 4px;
     top: 173px;
     margin: 0 auto;
-    height: 500px;
+    height: 615px;
     width: 330px;
     display: inline-block;
 }

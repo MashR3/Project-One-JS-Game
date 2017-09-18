@@ -18,12 +18,15 @@
 	margin: 0 auto;
     margin-top: 22px;
 	height: 60px;
-	width: 500px;
+	width: 489px;
 	margin-bottom: 14px;
 	display: inline-block;
 	margin-right: 15px;
     margin-left: 15px;
     background-color: #1d0d5a;
+    color: antiquewhite;
+    font-size: 52px;
+    padding-left: 28px;
 }
 
 #endturn {
