@@ -1,4 +1,8 @@
-// $(function (){
+$(function (){
+
+
+var endScreen = $('#death-screen').hide();
+var oneScreen = $('#levelone').hide();
 
 var $gameScore = 0;
 // var level = 0;
@@ -16,7 +20,7 @@ var lOneArray = [
 
 clueChoose();
 
-$('#clue').html(clueChoose());
+// $('#clue').html(startingClue);
 
 $('.correct').one('click', function(event){
 	$(this).css({
@@ -28,8 +32,9 @@ $('.correct').one('click', function(event){
 	displayScore();
 });
 
-$('.correct').on('click', function(event){$prog.animate({ width:'+=100px'})
-	})
+$('.correct').on('click', function(event){
+	$prog.animate({ width:'+=100px'})
+})
 
 // -------------------------------------------------------------------------------------------------------------------
 
@@ -48,12 +53,14 @@ $('.incorrect').one('click', function(event){
 	displayScore();
 	$(this).removeClass('incorrect');
 
-	compAdvance();
+	setTimeout(compAdvance, 1000);
+	clueChoose();
 });
 
-$('.incorrect').one('click', function(event){$comprog.animate({ width:'+=100px'})
+$('.incorrect').one('click', function(event){
+	$comprog.animate({ width:'+=100px'})
 	
-	})
+})
 
 
 
@@ -64,7 +71,9 @@ $('.neutral').one('click', function(event){
 		borderColor: '#66480a',
 		backgroundColor: '#e9bc80'
 	})
-compAdvance();
+
+	setTimeout(compAdvance, 1000);
+	clueChoose();
 })
 // ------------------------------------------------------------------------------------------------------------------
 
@@ -93,26 +102,26 @@ function displayScore () {
 
 	if ((parseInt($gameScore)) > 0) {
 		$scoreDigit.css({
-		backgroundColor: '#4ed453'
+			backgroundColor: '#4ed453'
 		})
 
 	} else if ((parseInt($gameScore)) < 0) {
 		$scoreDigit.css({
-		backgroundColor: 'red'
+			backgroundColor: 'red'
 		})
 
 	} else {
 		$scoreDigit.css({
-		backgroundColor: 'antiquewhite'
+			backgroundColor: 'antiquewhite'
 		})
 	}
 }
 // ------------------------------------------------------------------------------------------------------------
 function death () {
 	$('#levelone').fadeOut(2000, function(){
-    var div = $("<div id='death-screen'>'</div>").hide(1000000);
-    $(this).replaceWith(div);
-    $('levelone').fadeIn('slow');
+	    var div = $("<div id='death-screen'>'</div>").hide(1000000);
+	    $(this).replaceWith(div);
+	    $('levelone').fadeIn('slow');
 	});
 }
 // -------------------------------------------------------------------------------------------------------------
@@ -124,6 +133,9 @@ function clueChoose () {
 	var randClue = Math.floor(Math.random()*lOneArray.length);
 	var returnClue = lOneArray[randClue];
 	lOneArray.splice(randClue, 1);
+	// console.log(returnClue);
+	// debugger
+	$('#clue').html(returnClue);
 	return returnClue
 }
 // --------------------------------------------------------------------------------------------------------------
@@ -131,7 +143,6 @@ function compAdvance () {
 	var $ele = $('.incorrect');
 
 	var $rbox = Math.floor(Math.random()*($ele.length - 1));
-	// console.log($rbox.attr('id'));
 	$comprog.animate({ width:'+=100px'});
 
 	$ele.eq($rbox).css({
@@ -142,13 +153,6 @@ function compAdvance () {
 	$ele.eq($rbox).removeClass('incorrect');
 	console.log('index chosen: ' + $rbox);
 	console.log($ele);
-
-
-	
-	// $rbox.trigger('click');
-	// $ele.css({backgroundColor: 'red'});
-	// ($rbox).css({ backgroundColor: 'red'});
-
 }
 
 
@@ -178,4 +182,4 @@ function compAdvance () {
 
 
 
-	// });
+	});
