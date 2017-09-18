@@ -1,0 +1,77 @@
+body {
+	/*background-image: url(../images/bg3.jpeg);*/
+	/*background-size: cover;*/
+}
+
+
+.page {
+	background-image: url(../images/riv.png);
+	background-repeat-y: no-repeat;
+	background-position-y: bottom;  
+	/*z-index: 1;*/
+}
+
+
+#instcont {
+	background-color: #1c5a4d;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 44px;
+}
+
+#title {
+	border: solid red 4px;
+	height: 66px;
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 50px;
+    border-radius: 20px;
+
+}
+
+#inst {
+	border: solid red 4px;
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    vertical-align: top;
+    position: relative;
+}
+
+#go {
+	border: solid red 4px;
+    height: 50px;
+    width: 481px;
+    position: absolute;
+    top: 314px;
+    left: 55px;
+}
+
+#piccont {
+	left: 672px;
+    border: solid red 4px;
+    top: 173px;
+    margin: 0 auto;
+    height: 500px;
+    width: 330px;
+    display: inline-block;
+}
+
+.fpic {
+	border: solid red 4px;
+	position: inline-block;
+	height: 150px;
+    width: 323px;
+
+}
+
+
+
+

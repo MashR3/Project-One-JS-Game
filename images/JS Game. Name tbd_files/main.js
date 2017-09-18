@@ -10,7 +10,7 @@ var $death = $('#levelone');
 
 
 
-clueChoose();
+
 
 $('.correct').one('click', function(event){
 	$(this).css({
@@ -78,7 +78,7 @@ $('.death').one('click', function(event){
 
 
 
-// -----------------------------------------------------------------------------------------------------------
+
 // FUNCTIONS 
 
 function displayScore () {
@@ -101,7 +101,8 @@ function displayScore () {
 
 	}
 }
-// ------------------------------------------------------------------------------------------------------------
+
+
 function death () {
 	$('#levelone').fadeOut(2000, function(){
     var div = $("<div id='death-screen'>'</div>").hide(1000000);
@@ -109,37 +110,12 @@ function death () {
     $('levelone').fadeIn('slow');
 	});
 }
-// -------------------------------------------------------------------------------------------------------------
+
+
+
 function dScreenScore () {
 	$('#dscore').html('YOUR FINAL SCORE IS ' + $gameScore + '!');
 }
-// -------------------------------------------------------------------------------------------------------------
-function clueChoose () {
-	$('#clue').html('src', levelOneArray[randomClue]);
-}
-
-$
-
-var lOneArray = [
-	'Death: 2',
-	'Toolbox: 1',
-	'Vibrate: 2'
-];
-
-var randomClue = Math.floor(Math.random()*lOneArray.length);
-
-audioElement.setAttribute('src', lOneArray[randomClue]);
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -151,21 +127,21 @@ function compAdvance () {
 
 // MOVING BACKGROUND
 
-// var intval = null;
-// var pos = 0;
+var intval = null;
+var pos = 0;
 
-// $(document).ready(function() {
+$(document).ready(function() {
 
 
-//     intval = window.setInterval(moveBg, 50);
-// });
+    intval = window.setInterval(moveBg, 50);
+});
 
-// function moveBg() {
+function moveBg() {
     
-//     pos++;
+    pos++;
     
-//     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
-// }
+    $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
+}
  
 
 

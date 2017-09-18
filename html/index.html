@@ -3,6 +3,8 @@
 <head>
 	<title>JS Game. Name tbd</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style2.css">
+	<link rel="stylesheet" type="text/css" href="../css/styledeath.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 </head>
@@ -30,6 +32,7 @@
 		<div class="fpic" id="pic1"></div>
 		<div class="fpic" id="pic2"></div>
 		<div class="fpic" id="pic3"></div>
+		<div class="fpic" id="pic4"></div>
 
 	</div>
 
@@ -46,35 +49,36 @@
 	
 	<div id="token"></div>
 	<div id="clue"></div>
+	<div id="endturn">END TURN</div>
 	<div id="score"></div>
 	
 	<div id="board">
 		
-		<div id="c1" class="button1 correct">TOOTHBRUSH</div>
-		<div id="i1" class="button1 incorrect">WHEEL</div>
-		<div id="c2" class="button1 correct">NEWSPAPER</div>
+		<div id="c1" class="button1 correct">SCREWDRIVER</div>
+		<div id="i1" class="button1 correct">SHEEP</div>
+		<div id="c2" class="button1 correct">CLOCK</div>
 		<div id="n1" class="button1 neutral">PLUMBER</div>
-		<div id="i2" class="button1 incorrect">STRAWBERRY</div>
-		<div id="i3" class="button1 incorrect">SPIDER</div>
+		<div id="i2" class="button1 incorrect">DIARY</div>
+		<div id="i3" class="button1 correct">SPIDER</div>
 		<div id="c3" class="button1 correct">TUNNEL</div>
 		<div id="c4" class="button1 correct">FRANCE</div>
-		<div id="n2" class="button1 neutral">MICROSCOPE</div>
-		<div id="n3" class="button1 neutral">LAPTOP</div>
-		<div id="n4" class="button1 neutral">DRAGON</div>
-		<div id="i4" class="button1 incorrect">ARMY</div>
-		<div id="c5" class="button1 correct">AIR</div>
+		<div id="n2" class="button1 neutral">DISH</div>
+		<div id="n3" class="button1 neutral">CORAL</div>
+		<div id="n4" class="button1 death">DRAGON</div>
+		<div id="i4" class="button1 incorrect">HELMET</div>
+		<div id="c5" class="button1 incorrect">AIR</div>
 		<div id="i5" class="button1 incorrect">SCHOOL</div>
-		<div id="c6" class="button1 correct">BRUSSELS</div>
-		<div id="c7" class="button1 correct">WINDOW</div>
-		<div id="n5" class="button1 neutral">EAR</div>
-		<div id="d1" class="button1 death">HOSPITAL</div>
+		<div id="c6" class="button1 incorrect">CUSHION</div>
+		<div id="c7" class="button1 correct">POISON</div>
+		<div id="n5" class="button1 correct">EAR</div>
+		<div id="d1" class="button1 neutral">BOMB</div>
 		<div id="i6" class="button1 incorrect">DEER</div>
-		<div id="c8" class="button1 correct">FINGER</div>
+		<div id="c8" class="button1 correct">SHIRT</div>
 		<div id="i7" class="button1 incorrect">BOTTLE</div>
-		<div id="n6" class="button1 neutral">BUCKET</div>
-		<div id="c9" class="button1 correct">HOOK</div>
-		<div id="i8" class="button1 incorrect">PILOT</div>
-		<div id="n7" class="button1 neutral">GLASS</div>
+		<div id="n6" class="button1 neutral">TIMER</div>
+		<div id="c9" class="button1 neutral">ALCOHOL</div>
+		<div id="i8" class="button1 incorrect">NEW YORK</div>
+		<div id="n7" class="button1 neutral">COUCH</div>
 
 	</div>
 	
@@ -83,13 +87,37 @@
 	</div>
 
 
+	<div id="chasecont">
+		<div id="turt"></div>
+		<div id="crab"></div>
+	</div>
+
+
+	<div id="mbcomprog" class="mbcomprog">
+		<div id="comprog" class="comprog"></div>
+	</div>
+
 
 
 
 </div>
 
 
-<div id="death-screen"></div>
+<div id="death-screen">
+	<div id="dmessage">
+		<h2 id="dtext">YOU HAVE DIED</h2>
+	</div>
+	<div id="deadturt"></div>
+	<div id="dbuttons">
+		<div id="dscore"></div>
+		<div id="restart"> <a id="linkstyle" href="#instcont">RESTART</a></div>
+	</div>
+
+
+
+
+
+</div>
 
 
 <!-- END OF PAGE TWO -->

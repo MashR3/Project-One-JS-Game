@@ -1,0 +1,174 @@
+/*PAGE TWO CSS*/
+
+
+#levelone {
+	background-color: #3f2469;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 755px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 44px;
+	margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+#clue {
+	border: solid #673ab7 8px;
+	margin: 0 auto;
+    margin-top: 22px;
+	height: 60px;
+	width: 500px;
+	margin-bottom: 14px;
+	display: inline-block;
+	margin-right: 15px;
+    margin-left: 15px;
+    background-color: #1d0d5a;
+}
+
+#endturn {
+	border: solid black 4px;
+	height: 54px;
+	width: 131px;
+	display: inline-block;
+	margin-left: 23px;
+	margin-right: 28px;
+	margin-bottom: 21px;
+	height: 54px;
+	width: 131px;
+}
+
+#score {
+	border: solid black 4px;
+	display: inline-block;
+	height: 61px;
+	width: 67px;
+	padding-top: 4px;
+	margin: 0 auto;
+    margin-right: 10px;
+    margin-bottom: 14px;
+    font-size: 49px;
+    vertical-align: top;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 23px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+
+#token {
+	background-image: url(../images/turtmad.png);
+	background-color: #00aeef;
+	background-size: cover;
+	border: solid black 4px;
+	display: inline-block;
+	height: 66px;
+	width: 64px;
+	margin: 0 auto;
+	margin-left: 60px;
+    margin-top: 22px;
+    margin-bottom: 14px;
+    font-size: 50px;
+    vertical-align: top;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+#board {
+	border: solid transparent 4px;
+	margin: 0 auto;
+	height: 426px;
+	width: 946px;
+	border-radius: 35px;
+	margin-top: 6px;
+}
+.button1 {
+	border: solid #d9c4c4 4px;
+	border-radius: 15px;
+	display: inline-block;
+	background-color: antiqueWhite; 
+	margin: 0 auto;
+	margin-bottom: 6px;
+	margin-right: 3px;
+	padding-top: 27px;
+	text-align: center;
+	height: 43px;
+	width: 175px;
+	letter-spacing: 2px;
+	font-weight: 900;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	vertical-align: top;
+}
+
+.mbprog {
+	border: solid #90a0a2 4px;
+	margin: 0 auto;
+	height: 22px;
+	width: 900px;
+	border-radius: 50px;
+	background: beige;
+	margin-top: 32px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 50px;
+}
+
+.prog {
+	height: 22px;
+    width: 0px;
+   	background-color: #4ed453;
+    border-radius: 50px;
+}
+
+#chasecont {
+	height: 50px;
+	width: 900px;
+	border-color: solid red 4px;
+	display: inline-block;
+	background-color: transparent;
+    margin: 0 auto;
+    position: relative;
+    margin-left: 49px;
+}
+
+#turt {
+	height: 56px;
+	width: 56px;
+	margin-left: 185px;
+	margin-top: 5px;
+	display: inline-block;
+	background-image: url(../images/turtflap.png);
+	background-size: cover;
+}
+
+#crab {
+	height: 61px;
+	width: 80px;
+	margin-left: 395px;
+	display: inline-block;
+	background-image: url(../images/crabrf.png);
+	background-size: cover;
+}
+
+.mbcomprog {
+	border: solid #90a0a2 4px;
+	margin: 0 auto;
+	height: 22px;
+	width: 900px;
+	border-radius: 50px;
+	background: beige;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 50px;
+}
+
+.comprog {
+	height: 22px;
+    width: 100px;
+   	background-color: red;
+    border-radius: 50px;
+}
+
+
+
