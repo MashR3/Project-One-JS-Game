@@ -2,7 +2,7 @@ $(function (){
 
 
 var endScreen = $('#death-screen').hide();
-var oneScreen = $('#levelone').hide();
+// var oneScreen = $('#levelone').hide();
 
 var $gameScore = 0;
 // var level = 0;
@@ -182,4 +182,4 @@ function compAdvance () {
 
 
 
-	});
+});
