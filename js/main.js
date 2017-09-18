@@ -12,9 +12,15 @@ var $comprog = $('.comprog');
 var $death = $('#levelone');
 
 var lOneArray = [
-	'Death: 2',
-	'Toolbox: 1',
-	'Vibrate: 2'
+	'Zodiac: 2',
+	'Time: 2',
+	'Bone: 2',
+	'Note: 2',
+	'Lantern: 2',
+	'Worm: 2',
+	'Build: 2',
+	'Carry: 2',
+	'Wooden: 3'
 ];
 
 
@@ -32,17 +38,10 @@ $('.correct').one('click', function(event){
 	displayScore();
 });
 
-$('.correct').on('click', function(event){
+$('.correct').one('click', function(event){
 	$prog.animate({ width:'+=100px'})
 })
-
 // -------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
 
 $('.incorrect').one('click', function(event){
 	$(this).css({
@@ -61,9 +60,6 @@ $('.incorrect').one('click', function(event){
 	$comprog.animate({ width:'+=100px'})
 	
 })
-
-
-
 // -----------------------------------------------------------------------------------------------------------------
 
 $('.neutral').one('click', function(event){
@@ -75,7 +71,7 @@ $('.neutral').one('click', function(event){
 	setTimeout(compAdvance, 1000);
 	clueChoose();
 })
-// ------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------
 
 $('.death').one('click', function(event){
 	$(this).css({
@@ -86,16 +82,23 @@ $('.death').one('click', function(event){
 	death();
 	dScreenScore();
 })
+// --------------------------------------------------------------------------------------------------------------
+
+$('#endturn').on('click', function(event){
+	compAdvance();
+	clueChoose();
+})
+// --------------------------------------------------------------------------------------------------------------
+
+$('#restart').one('click', function(event){
+		var introScreen = $('#instcont').show();
+	    var oneScreen = $('#levelone').hide();
+		var endScreen = $('#death-screen').hide();
+})
 
 
-// $('#endturn').on('click', function(event){$comprog.animate({ width:'+=100px'})
-// 	})
 
-
-
-
-// -----------------------------------------------------------------------------------------------------------
-// FUNCTIONS 
+// ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
 
 function displayScore () {
 	$scoreDigit.html($gameScore);
@@ -119,14 +122,17 @@ function displayScore () {
 // ------------------------------------------------------------------------------------------------------------
 function death () {
 	$('#levelone').fadeOut(2000, function(){
-	    var div = $("<div id='death-screen'>'</div>").hide(1000000);
-	    $(this).replaceWith(div);
-	    $('levelone').fadeIn('slow');
+	    // var div = $("<div id='death-screen'>'</div>").hide(1000000);
+	    var introScreen = $('#instcont').hide();
+	    var oneScreen = $('#levelone').hide();
+		var endScreen = $('#death-screen').show();
+	    // $(this).replaceWith(div);
+	    // $('levelone').fadeIn('slow');
 	});
 }
 // -------------------------------------------------------------------------------------------------------------
 function dScreenScore () {
-	$('#dscore').html('YOUR FINAL SCORE IS ' + $gameScore + '!');
+	$('#dscore').html('YOUR FINAL SCORE IS:    ' + $gameScore + '!');
 }
 // -------------------------------------------------------------------------------------------------------------
 function clueChoose () {
@@ -154,28 +160,31 @@ function compAdvance () {
 	console.log('index chosen: ' + $rbox);
 	console.log($ele);
 }
+// ----------------------------------------------------------------------------------------------------------------
+// function () {
+
+// }
 
 
 
 
+// MOVING BACKGROUND -------------------------------------------------------------------------------------------------
 
-// MOVING BACKGROUND
+// var intval = null;
+// var pos = 0;
 
-var intval = null;
-var pos = 0;
-
-$(document).ready(function() {
+// $(document).ready(function() {
 
 
-    intval = window.setInterval(moveBg, 20);
-});
+//     intval = window.setInterval(moveBg, 20);
+// });
 
-function moveBg() {
+// function moveBg() {
     
-    pos++;
+//     pos++;
     
-    $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
-}
+//     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
+// }
  
 
 

@@ -3,6 +3,13 @@ body {
 	/*background-size: cover;*/
 }
 
+p {
+	font-size: 20px;
+	padding-left: 17px;
+    padding-right: 17px;
+    text-align: justify;
+}
+
 
 .page {
 	background-image: url(../images/riv.png);
@@ -13,7 +20,7 @@ body {
 
 
 #instcont {
-	background-color: #1c5a4d;
+	background-color: #562b99;
 	border: solid red 4px;
 	border-radius: 50px;
 	height: 755px;
@@ -23,18 +30,25 @@ body {
 }
 
 #title {
-	border: solid red 4px;
-	height: 66px;
-	width: 700px;
+	border: solid black 4px;
+	height: 74px;
+	width: 798px;
 	margin: 0 auto;
-	margin-top: 36px;
+	margin-top: 26px;
     border-radius: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 63px;
+    font-weight: 900;
+    color: #0a0a97;
+    background-color: aliceblue;
 
 }
 
 #inst {
 	border: solid red 4px;
-    height: 551px;
+    height: 567px;
     width: 600px;
     margin: 0 auto;
     display: inline-block;
@@ -43,15 +57,33 @@ body {
     margin-top: 30px;
     vertical-align: top;
     position: relative;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 33px;
+    color: #0a0a97;
+    background-color: #e498e5;
+}
+
+#htp {
+	letter-spacing: 4px;
+    font-size: 30px;
+    margin-left: 17px;
+    margin-bottom: 5px;
+    margin-top: 12px;
 }
 
 #go {
-	border: solid red 4px;
+	border: solid black 4px;
     height: 50px;
     width: 481px;
+    margin-top: 12px;
     position: absolute;
     top: 473px;
     left: 55px;
+    font-weight: 900;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 43px;
+    text-align: center;
+    background-color: aliceblue;
 }
 
 #piccont {
