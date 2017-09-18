@@ -1,4 +1,4 @@
-$(function (){
+// $(function (){
 
 var $gameScore = 0;
 // var level = 0;
@@ -31,7 +31,7 @@ $('.correct').one('click', function(event){
 $('.correct').on('click', function(event){$prog.animate({ width:'+=100px'})
 	})
 
-
+// -------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -46,20 +46,27 @@ $('.incorrect').one('click', function(event){
 	})
 	$gameScore = $gameScore - 1;
 	displayScore();
+	$(this).removeClass('incorrect');
+
+	compAdvance();
 });
 
-$('.incorrect').on('click', function(event){$comprog.animate({ width:'+=100px'})
+$('.incorrect').one('click', function(event){$comprog.animate({ width:'+=100px'})
+	
 	})
 
 
+
+// -----------------------------------------------------------------------------------------------------------------
 
 $('.neutral').one('click', function(event){
 	$(this).css({
 		borderColor: '#66480a',
 		backgroundColor: '#e9bc80'
 	})
+compAdvance();
 })
-
+// ------------------------------------------------------------------------------------------------------------------
 
 $('.death').one('click', function(event){
 	$(this).css({
@@ -122,8 +129,25 @@ function clueChoose () {
 // --------------------------------------------------------------------------------------------------------------
 function compAdvance () {
 	var $ele = $('.incorrect');
-	$ele.eq(Math.floor(Math.random()*($ele.length - 1))).attr('id');
+
+	var $rbox = Math.floor(Math.random()*($ele.length - 1));
+	// console.log($rbox.attr('id'));
 	$comprog.animate({ width:'+=100px'});
+
+	$ele.eq($rbox).css({
+		borderColor: 'red',
+		backgroundColor: '#c12c2c'
+	})
+
+	$ele.eq($rbox).removeClass('incorrect');
+	console.log('index chosen: ' + $rbox);
+	console.log($ele);
+
+
+	
+	// $rbox.trigger('click');
+	// $ele.css({backgroundColor: 'red'});
+	// ($rbox).css({ backgroundColor: 'red'});
 
 }
 
@@ -154,4 +178,4 @@ function compAdvance () {
 
 
 
-	});
+	// });
