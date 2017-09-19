@@ -20,6 +20,7 @@ var lOneArray = [
 	'Worm: 2',
 	'Build: 2',
 	'Carry: 2',
+	'Tricks: 2',
 	'Wooden: 3'
 ];
 
