@@ -4,6 +4,7 @@ var introScreen = $('#instcont').show();
 var endScreen = $('#death-screen').hide();
 var oneScreen = $('#levelone').hide();
 var winScreen = $('#win-screen').hide();
+var twoScreen = $('#leveltwo').hide();
 
 var totalScore = $('#yourscore');
 var $gameScore = 0;
@@ -12,7 +13,6 @@ var $prog = $('.prog');
 var $comprog = $('.comprog');
 var redcount = 1;
 var greencount = 0;
-var $death = $('#levelone');
 
 var lOneArray = [
 	'Zodiac: 2',
@@ -26,6 +26,31 @@ var lOneArray = [
 	'Tricks: 2',
 	'Wooden: 3'
 ];
+
+var lTwoArray = [
+	'Wolf: 2',
+	'Mint: 2',
+	'Electric: 2',
+	'Pop: 2',
+	'Blow: 4',
+	'Harpoon: 2',
+	'Ear: 2',
+	'Ocean: 2',
+	'Puppy: 2'
+];
+
+var lThreeArray = [
+	'Finger: 3',
+	'Dictionary: 2',
+	'Study: 2',
+	'Cross: 2',
+	'Fast: 2',
+	'Strike',
+	'Roll: 2',
+	'Fall: 2',
+	'Taste: 2'
+]
+
 
 
 clueChoose();
@@ -102,6 +127,8 @@ $('#startgame').on('click', function(){
 	var introScreen = $('#instcont').hide();
 	var oneScreen = $('#levelone').show();
 	var endScreen = $('#death-screen').hide();
+	var twoScreen = $('#leveltwo').hide();
+
 })
 // ---------------------------------------------------------------------------------------------------------------
 $('#clear').on('click', function(){
@@ -138,6 +165,8 @@ function death () {
 	    var oneScreen = $('#levelone').hide();
 		var endScreen = $('#death-screen').show();
 		var winScreen = $('#win-screen').hide();
+		var twoScreen = $('#leveltwo').hide();
+
 	});
 }
 // -------------------------------------------------------------------------------------------------------------
@@ -182,8 +211,11 @@ function winner () {
 	    var introScreen = $('#instcont').hide();
 	    var oneScreen = $('#levelone').hide();
 		var endScreen = $('#death-screen').hide();
-		var winScreen = $('#win-screen').show();
-		// yourScore();
+		var winScreen = $('#win-screen').hide();
+		var twoScreen = $('#leveltwo').show();
+		var redcount = 1;
+		var greencount = 0;
+
 	});
 }
 // -----------------------------------------------------------------------------------------------------------------
@@ -191,6 +223,8 @@ function restart() {
 	var introScreen = $('#instcont').show();
 	var oneScreen = $('#levelone').hide();
 	var endScreen = $('#death-screen').hide();
+	var twoScreen = $('#leveltwo').hide();
+
 	location.reload();
 }
 //------------------------------------------------------------------------------------------------------------------
@@ -198,6 +232,10 @@ function yourScore () {
 	$('#yourscore').html('YOUR FINAL SCORE IS:   ' + $gameScore + '!');
 }
 
+// ------------------------------------------------------------------------------------------------------------------
+// function goToLevelTwo () {
+
+// }
 
 // MOVING BACKGROUND -----------------------------------------------------------------------------------------------
 

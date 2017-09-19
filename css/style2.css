@@ -7,6 +7,15 @@
 	margin: 0 auto;
 }
 
+#leveltwo {
+	background-color: #c95a18;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 755px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
 #clue {
 	border: solid #673ab7 8px;
 	margin: 0 auto;
