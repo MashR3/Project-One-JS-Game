@@ -1,59 +1,64 @@
 $(function (){
 
-var introScreen = $('#instcont').show();
-var endScreen = $('#death-screen').hide();
-var oneScreen = $('#levelone').hide();
-var winScreen = $('#win-screen').hide();
-var twoScreen = $('#leveltwo').hide();
+	var introScreen = $('#instcont').show();
+	var endScreen = $('#death-screen').hide();
+	var winScreen = $('#win-screen').hide();
+	var oneScreen = $('#levelone').hide();
+	var twoScreen = $('#leveltwo').hide();
+	// var threeScreen = $('#levelthree').hide(); 
 
-var totalScore = $('#yourscore');
-var $gameScore = 0;
-var $scoreDigit = $('#score');
-var $prog = $('.prog');
-var $comprog = $('.comprog');
-var redcount = 1;
-var greencount = 0;
+	// var totalScore = $('#yourscore');
+	var $gameScore = 0;
+	var $scoreDigit = $('#score');
+	var $prog = $('.prog');
+	var $comprog = $('.comprog');
+	var redcount = 1;
+	var redcount2 = 1;
+	var greencount = 0;
+	var greencount2 = 0;
 
-var lOneArray = [
-	'Zodiac: 2',
-	'Time: 2',
-	'Bone: 2',
-	'Note: 2',
-	'Lantern: 2',
-	'Worm: 2',
-	'Build: 2',
-	'Carry: 2',
-	'Tricks: 2',
-	'Wooden: 3'
-];
+	var lOneArray = [
+		'Zodiac: 2',
+		'Time: 2',
+		'Bone: 2',
+		'Note: 2',
+		'Lantern: 2',
+		'Worm: 2',
+		'Build: 2',
+		'Carry: 2',
+		'Tricks: 2',
+		'Wooden: 3'
+	];
 
-var lTwoArray = [
-	'Wolf: 2',
-	'Mint: 2',
-	'Electric: 2',
-	'Pop: 2',
-	'Blow: 4',
-	'Harpoon: 2',
-	'Ear: 2',
-	'Ocean: 2',
-	'Puppy: 2'
-];
+	var lTwoArray = [
+		'Wolf: 2',
+		'Mint: 2',
+		'Electric: 2',
+		'Pop: 2',
+		'Blow: 4',
+		'Harpoon: 2',
+		'Ear: 2',
+		'Ocean: 2',
+		'Puppy: 2'
+	];
 
-var lThreeArray = [
-	'Finger: 3',
-	'Dictionary: 2',
-	'Study: 2',
-	'Cross: 2',
-	'Fast: 2',
-	'Strike',
-	'Roll: 2',
-	'Fall: 2',
-	'Taste: 2'
-]
+	var lThreeArray = [
+		'Finger: 3',
+		'Dictionary: 2',
+		'Study: 2',
+		'Cross: 2',
+		'Fast: 2',
+		'Strike',
+		'Roll: 2',
+		'Fall: 2',
+		'Taste: 2'
+	]
+
+	clueChoose();
 
 
 
-clueChoose();
+
 
 // ----------------------------------------------------------------------------------------------------
 $('.correct').one('click', function(event){
@@ -233,6 +238,12 @@ function yourScore () {
 }
 
 // ------------------------------------------------------------------------------------------------------------------
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// ALL THE LEVEL TWO!!!!!
+
+
+
+
 // function goToLevelTwo () {
 
 // }
@@ -254,7 +265,5 @@ function yourScore () {
     
 //     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
 // }
- 
-
 
 });

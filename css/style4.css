@@ -1,5 +1,5 @@
-#levelone {
-	background-color: #3f2469;
+#levelthree {
+	background-color: #cb6b08;
 	border: solid red 4px;
 	border-radius: 50px;
 	height: 755px;
@@ -8,7 +8,7 @@
 	margin-top: 27px;
 }
 
-#clue {
+#clue3 {
 	border: solid #673ab7 8px;
 	margin: 0 auto;
     margin-top: 22px;
@@ -24,7 +24,7 @@
     padding-left: 28px;
 }
 
-#clear {
+#clear3 {
 	border: solid black 4px;
 	height: 40px;
 	width: 82px;
@@ -33,9 +33,10 @@
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	text-align: center;
     background-color: red;
+    margin-bottom: 20px;
 }
 
-#endturn {
+#endturn3 {
 	border: solid black 4px;
 	background-color: aliceblue;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -54,7 +55,7 @@
 	width: 131px;
 }
 
-#score {
+#score3 {
 	border: solid black 4px;
 	display: inline-block;
 	height: 61px;
@@ -72,7 +73,7 @@
     border-radius: 50%;
 }
 
-#token {
+#token3 {
 	background-image: url(../images/turtmad.png);
 	background-color: #00aeef;
 	background-size: cover;
@@ -90,16 +91,17 @@
     text-align: center;
 }
 
-#board {
+#board3 {
 	border: solid transparent 4px;
 	margin: 0 auto;
 	height: 426px;
 	width: 946px;
 	border-radius: 35px;
-	margin-top: 6px;
+	margin-top: -5px;
+    margin-bottom: 23px;
 }
 
-.button1 {
+.button123 {
 	border: solid #d9c4c4 4px;
 	border-radius: 15px;
 	display: inline-block;
@@ -117,27 +119,27 @@
 	vertical-align: top;
 }
 
-.mbprog {
+.mbprog3 {
 	border: solid #90a0a2 4px;
 	margin: 0 auto;
 	height: 22px;
 	width: 900px;
 	border-radius: 50px;
 	background: beige;
-	margin-top: 32px;
+	margin-top: 0px;
 	margin-bottom: 10px;
 	text-align: center;
 	font-size: 50px;
 }
 
-.prog {
+.prog3 {
 	height: 22px;
     width: 0px;
    	background-color: #4ed453;
     border-radius: 50px;
 }
 
-#chasecont {
+#chasecont3 {
 	height: 50px;
 	width: 900px;
 	border-color: solid red 4px;
@@ -148,7 +150,7 @@
     margin-left: 49px;
 }
 
-#turt {
+#turt3 {
 	position: fixed;
 	height: 56px;
 	width: 56px;
@@ -163,7 +165,7 @@
 	-webkit-animation-iteration-count: infinite;
 }
 
-#crab {
+#crab3 {
 	position: fixed;
 	height: 61px;
 	width: 80px;
@@ -177,7 +179,7 @@
 	-webkit-animation-iteration-count: infinite;
 }
 
-.mbcomprog {
+.mbcomprog3 {
 	border: solid #90a0a2 4px;
 	margin: 0 auto;
 	height: 22px;
@@ -189,7 +191,7 @@
 	font-size: 50px;
 }
 
-.comprog {
+.comprog3 {
 	height: 22px;
     width: 100px;
    	background-color: red;
