@@ -30,7 +30,6 @@ var lOneArray = [
 
 clueChoose();
 
-
 // ----------------------------------------------------------------------------------------------------
 $('.correct').one('click', function(event){
 	$(this).css({
@@ -97,10 +96,6 @@ $('#endturn').on('click', function(event){
 // ---------------------------------------------------------------------------------------------------------------
 $('#restart').on('click', function(event){
 	restart();
-	// var introScreen = $('#instcont').show();
-	// var oneScreen = $('#levelone').hide();
-	// var endScreen = $('#death-screen').hide();
-	// location.reload();
 })
 // ---------------------------------------------------------------------------------------------------------------
 $('#startgame').on('click', function(){
@@ -111,18 +106,10 @@ $('#startgame').on('click', function(){
 // ---------------------------------------------------------------------------------------------------------------
 $('#clear').on('click', function(){
 	restart();
-	// var introScreen = $('#instcont').show();
-	// var oneScreen = $('#levelone').hide();
-	// var endScreen = $('#death-screen').hide();
-	// location.reload();
 })
-
+//----------------------------------------------------------------------------------------------------------------
 $('#playagain').on('click', function(){
 	restart();
-	// var introScreen = $('#instcont').show();
-	// var oneScreen = $('#levelone').hide();
-	// var endScreen = $('#death-screen').hide();
-	// location.reload();
 })
 // ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
 function displayScore () {
@@ -211,6 +198,7 @@ function yourScore () {
 	$('#yourscore').html('YOUR FINAL SCORE IS:   ' + $gameScore + '!');
 }
 
+
 // MOVING BACKGROUND -----------------------------------------------------------------------------------------------
 
 // var intval = null;
@@ -219,7 +207,7 @@ function yourScore () {
 // $(document).ready(function() {
 
 
-//     intval = window.setInterval(moveBg, 20);
+//     intval = window.setInterval(moveBg, 10);
 // });
 
 // function moveBg() {

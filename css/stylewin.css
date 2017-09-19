@@ -16,7 +16,6 @@
 #win-text {
 	height: 230px;
 	width: 1000px;
-	/*border: solid black 4px;*/
 	text-align: center;
 	display: inline-block;
 }
@@ -30,7 +29,6 @@
 #winpiccont {
 	width: 1000px;
 	height: 270px;
-	/*border: solid black 4px;*/
 	display: inline-block;
 }
 
@@ -39,7 +37,6 @@
     width: 113px;
     margin-right: 225px;
     margin-left: 200px;
-	/*border: solid black 4px;*/
 	display: inline-block;
 	background-image: url(../images/turtthumb.png);
 	background-size: cover;
@@ -48,7 +45,6 @@
 #wincrab {
 	height: 214px;
     width: 250px;
-	/*border: solid black 4px;*/
 	display: inline-block;
 	background-image: url(../images/crabend.png);
 	background-size: cover;
@@ -60,7 +56,6 @@
     width: 1000px;
     margin-top: 50px;
     text-align: center;
-	/*border: solid black 4px;*/
 	display: inline-block;
 }
 
