@@ -1,6 +1,5 @@
 body {
-	/*background-image: url(../images/bg3.jpeg);*/
-	/*background-size: cover;*/
+
 }
 
 p {
@@ -34,25 +33,6 @@ h6 {
     padding-left: 5px;
 }
 
-/*#pic1 {
-	background-image: url(../images/cluepic.jpg);
-	background-size: cover;
-	height: 158px;
-}
-
-#pic2 {
-	background-image: url(../images/endturnscore.jpg);
-	background-size: contain;
-	height: 40px;
-    padding-top: 101px;
-}
-
-#pic3 {
-	background-image: url(../images/redbar.jpg);
-	background-size: contain;
-
-}*/
-
 #rbarh6 {
 	position: absolute;
     right: 29px;
@@ -62,9 +42,7 @@ h6 {
 	background-image: url(../images/riv.png);
 	background-repeat-y: no-repeat;
 	background-position-y: bottom;  
-	/*z-index: 1;*/
 }
-
 
 #instcont {
 	background-color: #562b99;
@@ -90,7 +68,6 @@ h6 {
     font-weight: 900;
     color: #0a0a97;
     background-color: aliceblue;
-
 }
 
 #inst {
@@ -132,27 +109,7 @@ h6 {
     font-size: 43px;
     text-align: center;
     background-color: aliceblue;
-
 }
-/*
-#piccont {
-	left: 672px;
-    /*border: solid red 4px;*/
-  /*  top: 173px;
-    margin: 0 auto;
-    height: 615px;
-    width: 340px;
-    display: inline-block;
-}*/
-/*
-.fpic {
-	border: solid red 4px;
-	position: inline-block;
-	height: 150px;
-    width: 335px;
-
-}
-*/
 
 
 

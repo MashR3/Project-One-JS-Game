@@ -1,4 +1,3 @@
-
 #death-screen {
 	background-color: #0d1a7f;
 	border: solid black 4px;
@@ -7,8 +6,6 @@
 	width: 1000px;
 	margin: 0 auto;
     display: inline-block;
-
-
 }
 
 #dmessage {
@@ -32,9 +29,7 @@
 #dbuttons {
 	height: 150px;
     width: 993px;
-    /*border: solid black 4px;*/
     margin-top: 0px;
-
 }
 
 #dtext {
@@ -48,7 +43,6 @@
 #dscore {
     height: 57px;
     width: 550px;
-	/*border: solid red 4px;*/
 	display: inline-block;
 	vertical-align: middle;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
