@@ -3,17 +3,12 @@ $(function (){
 var introScreen = $('#instcont').show();
 var endScreen = $('#death-screen').hide();
 var oneScreen = $('#levelone').hide();
-
 var $gameScore = 0;
-// var level = 0;
 var $scoreDigit = $('#score');
 var $prog = $('.prog');
 var $comprog = $('.comprog');
-
-
 var redcount = 1;
 var greencount = 0;
-
 var $death = $('#levelone');
 
 var lOneArray = [
@@ -32,8 +27,8 @@ var lOneArray = [
 
 clueChoose();
 
-// $('#clue').html(startingClue);
 
+// ----------------------------------------------------------------------------------------------------
 $('.correct').one('click', function(event){
 	$(this).css({
 		borderColor: '#010d01',
@@ -50,12 +45,12 @@ $('.correct').one('click', function(event){
 	checkBar();
 })
 // -------------------------------------------------------------------------------------------------------------------
-
 $('.incorrect').one('click', function(event){
 	$(this).css({
 		borderColor: 'red',
 		backgroundColor: '#c12c2c'
 	})
+
 	$gameScore = $gameScore - 1;
 	displayScore();
 	$(this).removeClass('incorrect');
@@ -68,11 +63,9 @@ $('.incorrect').one('click', function(event){
 	$comprog.animate({ width:'+=100px'})
 	redcount ++;
 	redcount ++;
-	checkBar();
-	
+	checkBar();	
 })
 // -----------------------------------------------------------------------------------------------------------------
-
 $('.neutral').one('click', function(event){
 	$(this).css({
 		borderColor: '#66480a',
@@ -85,7 +78,6 @@ $('.neutral').one('click', function(event){
 	checkBar();
 })
 // -------------------------------------------------------------------------------------------------------------
-
 $('.death').one('click', function(event){
 	$(this).css({
 		borderColor: 'white',
@@ -96,13 +88,11 @@ $('.death').one('click', function(event){
 	dScreenScore();
 })
 // ---------------------------------------------------------------------------------------------------------------
-
 $('#endturn').on('click', function(event){
 	compAdvance();
 	clueChoose();
 })
 // ---------------------------------------------------------------------------------------------------------------
-
 $('#restart').on('click', function(event){
 	var introScreen = $('#instcont').show();
 	var oneScreen = $('#levelone').hide();
@@ -110,15 +100,12 @@ $('#restart').on('click', function(event){
 	location.reload();
 })
 // ---------------------------------------------------------------------------------------------------------------
-
 $('#startgame').on('click', function(){
 	var introScreen = $('#instcont').hide();
 	var oneScreen = $('#levelone').show();
 	var endScreen = $('#death-screen').hide();
 })
-
 // ---------------------------------------------------------------------------------------------------------------
-
 $('#clear').on('click', function(){
 	var introScreen = $('#instcont').show();
 	var oneScreen = $('#levelone').hide();
@@ -126,7 +113,6 @@ $('#clear').on('click', function(){
 	location.reload();
 })
 // ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
-
 function displayScore () {
 	$scoreDigit.html($gameScore);
 
@@ -149,12 +135,9 @@ function displayScore () {
 // ------------------------------------------------------------------------------------------------------------
 function death () {
 	$('#levelone').fadeOut(2000, function(){
-	    // var div = $("<div id='death-screen'>'</div>").hide(1000000);
 	    var introScreen = $('#instcont').hide();
 	    var oneScreen = $('#levelone').hide();
 		var endScreen = $('#death-screen').show();
-	    // $(this).replaceWith(div);
-	    // $('levelone').fadeIn('slow');
 	});
 }
 // -------------------------------------------------------------------------------------------------------------
@@ -165,27 +148,23 @@ function dScreenScore () {
 function clueChoose () {
 	var randClue = Math.floor(Math.random()*lOneArray.length);
 	var returnClue = lOneArray[randClue];
+
 	lOneArray.splice(randClue, 1);
-	// console.log(returnClue);
-	// debugger
 	$('#clue').html(returnClue);
 	return returnClue
 }
 // --------------------------------------------------------------------------------------------------------------
 function compAdvance () {
 	var $ele = $('.incorrect');
-
 	var $rbox = Math.floor(Math.random()*($ele.length - 1));
-	$comprog.animate({ width:'+=100px'});
 
+	$comprog.animate({ width:'+=100px'});
 	$ele.eq($rbox).css({
 		borderColor: 'red',
 		backgroundColor: '#c12c2c'
 	})
 
 	$ele.eq($rbox).removeClass('incorrect');
-	console.log('index chosen: ' + $rbox);
-	console.log($ele);
 }
 // ----------------------------------------------------------------------------------------------------------------
 function checkBar () {
@@ -195,7 +174,6 @@ function checkBar () {
 		death();
 	}
 }
-
 
 
 
