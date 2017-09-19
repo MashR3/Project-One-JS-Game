@@ -9,6 +9,11 @@ var $gameScore = 0;
 var $scoreDigit = $('#score');
 var $prog = $('.prog');
 var $comprog = $('.comprog');
+
+
+var redcount = 1;
+var greencount = 0;
+
 var $death = $('#levelone');
 
 var lOneArray = [
@@ -41,6 +46,8 @@ $('.correct').one('click', function(event){
 
 $('.correct').one('click', function(event){
 	$prog.animate({ width:'+=100px'})
+	greencount ++;
+	checkBar();
 })
 // -------------------------------------------------------------------------------------------------------------------
 
@@ -59,6 +66,9 @@ $('.incorrect').one('click', function(event){
 
 $('.incorrect').one('click', function(event){
 	$comprog.animate({ width:'+=100px'})
+	redcount ++;
+	redcount ++;
+	checkBar();
 	
 })
 // -----------------------------------------------------------------------------------------------------------------
@@ -71,6 +81,8 @@ $('.neutral').one('click', function(event){
 
 	setTimeout(compAdvance, 1000);
 	clueChoose();
+	redcount ++;
+	checkBar();
 })
 // -------------------------------------------------------------------------------------------------------------
 
@@ -95,6 +107,7 @@ $('#restart').on('click', function(event){
 	var introScreen = $('#instcont').show();
 	var oneScreen = $('#levelone').hide();
 	var endScreen = $('#death-screen').hide();
+	location.reload();
 })
 // ---------------------------------------------------------------------------------------------------------------
 
@@ -166,9 +179,13 @@ function compAdvance () {
 	console.log($ele);
 }
 // ----------------------------------------------------------------------------------------------------------------
-// function () {
-
-// }
+function checkBar () {
+	if (greencount === 9) {
+		death();
+	} else if (redcount === 9) {
+		death();
+	}
+}
 
 
 

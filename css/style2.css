@@ -15,7 +15,7 @@
 	margin: 0 auto;
     margin-top: 22px;
 	height: 60px;
-	width: 489px;
+	width: 410px;
 	margin-bottom: 14px;
 	display: inline-block;
 	margin-right: 15px;
@@ -24,6 +24,18 @@
     color: antiquewhite;
     font-size: 52px;
     padding-left: 28px;
+}
+
+#clear {
+	border: solid black 4px;
+	height: 40px;
+	width: 82px;
+	display: inline-block;
+	font-weight: 900;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	text-align: center;
+    /*top: 17px;*/
+    background-color: red;
 }
 
 #endturn {
@@ -37,8 +49,8 @@
 	height: 54px;
 	width: 131px;
 	display: inline-block;
-	margin-left: 23px;
-	margin-right: 28px;
+	margin-left: 21px;
+	margin-right: 20px;
 	margin-bottom: 28px;
 	padding-top: 10px;
 	height: 37px;
