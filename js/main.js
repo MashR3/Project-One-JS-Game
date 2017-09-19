@@ -116,6 +116,15 @@ $('#startgame').on('click', function(){
 	var oneScreen = $('#levelone').show();
 	var endScreen = $('#death-screen').hide();
 })
+
+// ---------------------------------------------------------------------------------------------------------------
+
+$('#clear').on('click', function(){
+	var introScreen = $('#instcont').show();
+	var oneScreen = $('#levelone').hide();
+	var endScreen = $('#death-screen').hide();
+	location.reload();
+})
 // ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
 
 function displayScore () {
