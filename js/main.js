@@ -3,9 +3,9 @@ $(function (){
 var introScreen = $('#instcont').show();
 var endScreen = $('#death-screen').hide();
 var oneScreen = $('#levelone').hide();
-var winScreen = $('#win-screen').show();
+var winScreen = $('#win-screen').hide();
 
-
+var totalScore = $('#yourscore');
 var $gameScore = 0;
 var $scoreDigit = $('#score');
 var $prog = $('.prog');
@@ -64,8 +64,7 @@ $('.incorrect').one('click', function(event){
 
 $('.incorrect').one('click', function(event){
 	$comprog.animate({ width:'+=100px'})
-	redcount ++;
-	redcount ++;
+	redcount += 2;
 	checkBar();	
 })
 // -----------------------------------------------------------------------------------------------------------------
@@ -74,10 +73,9 @@ $('.neutral').one('click', function(event){
 		borderColor: '#66480a',
 		backgroundColor: '#e9bc80'
 	})
-
+	redcount ++;
 	setTimeout(compAdvance, 1000);
 	clueChoose();
-	redcount ++;
 	checkBar();
 })
 // -------------------------------------------------------------------------------------------------------------
@@ -93,14 +91,16 @@ $('.death').one('click', function(event){
 // ---------------------------------------------------------------------------------------------------------------
 $('#endturn').on('click', function(event){
 	compAdvance();
+	redcount ++;
 	clueChoose();
 })
 // ---------------------------------------------------------------------------------------------------------------
 $('#restart').on('click', function(event){
-	var introScreen = $('#instcont').show();
-	var oneScreen = $('#levelone').hide();
-	var endScreen = $('#death-screen').hide();
-	location.reload();
+	restart();
+	// var introScreen = $('#instcont').show();
+	// var oneScreen = $('#levelone').hide();
+	// var endScreen = $('#death-screen').hide();
+	// location.reload();
 })
 // ---------------------------------------------------------------------------------------------------------------
 $('#startgame').on('click', function(){
@@ -110,10 +110,19 @@ $('#startgame').on('click', function(){
 })
 // ---------------------------------------------------------------------------------------------------------------
 $('#clear').on('click', function(){
-	var introScreen = $('#instcont').show();
-	var oneScreen = $('#levelone').hide();
-	var endScreen = $('#death-screen').hide();
-	location.reload();
+	restart();
+	// var introScreen = $('#instcont').show();
+	// var oneScreen = $('#levelone').hide();
+	// var endScreen = $('#death-screen').hide();
+	// location.reload();
+})
+
+$('#playagain').on('click', function(){
+	restart();
+	// var introScreen = $('#instcont').show();
+	// var oneScreen = $('#levelone').hide();
+	// var endScreen = $('#death-screen').hide();
+	// location.reload();
 })
 // ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
 function displayScore () {
@@ -141,6 +150,7 @@ function death () {
 	    var introScreen = $('#instcont').hide();
 	    var oneScreen = $('#levelone').hide();
 		var endScreen = $('#death-screen').show();
+		var winScreen = $('#win-screen').hide();
 	});
 }
 // -------------------------------------------------------------------------------------------------------------
@@ -172,15 +182,36 @@ function compAdvance () {
 // ----------------------------------------------------------------------------------------------------------------
 function checkBar () {
 	if (greencount === 9) {
+		winner();
+		yourScore();
+	} else if (redcount >= 9) {
 		death();
-	} else if (redcount === 9) {
-		death();
+		dScreenScore();
 	}
 }
+// ----------------------------------------------------------------------------------------------------------------
+function winner () {
+	$('#levelone').fadeOut(1500, function(){
+	    var introScreen = $('#instcont').hide();
+	    var oneScreen = $('#levelone').hide();
+		var endScreen = $('#death-screen').hide();
+		var winScreen = $('#win-screen').show();
+		// yourScore();
+	});
+}
+// -----------------------------------------------------------------------------------------------------------------
+function restart() {
+	var introScreen = $('#instcont').show();
+	var oneScreen = $('#levelone').hide();
+	var endScreen = $('#death-screen').hide();
+	location.reload();
+}
+//------------------------------------------------------------------------------------------------------------------
+function yourScore () {
+	$('#yourscore').html('YOUR FINAL SCORE IS:   ' + $gameScore + '!');
+}
 
-
-
-// MOVING BACKGROUND -------------------------------------------------------------------------------------------------
+// MOVING BACKGROUND -----------------------------------------------------------------------------------------------
 
 // var intval = null;
 // var pos = 0;

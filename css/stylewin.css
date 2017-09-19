@@ -16,7 +16,7 @@
 #win-text {
 	height: 230px;
 	width: 1000px;
-	border: solid black 4px;
+	/*border: solid black 4px;*/
 	text-align: center;
 	display: inline-block;
 }
@@ -30,7 +30,7 @@
 #winpiccont {
 	width: 1000px;
 	height: 270px;
-	border: solid black 4px;
+	/*border: solid black 4px;*/
 	display: inline-block;
 }
 
@@ -39,7 +39,7 @@
     width: 113px;
     margin-right: 225px;
     margin-left: 200px;
-	border: solid black 4px;
+	/*border: solid black 4px;*/
 	display: inline-block;
 	background-image: url(../images/turtthumb.png);
 	background-size: cover;
@@ -48,7 +48,7 @@
 #wincrab {
 	height: 214px;
     width: 250px;
-	border: solid black 4px;
+	/*border: solid black 4px;*/
 	display: inline-block;
 	background-image: url(../images/crabend.png);
 	background-size: cover;
@@ -60,21 +60,33 @@
     width: 1000px;
     margin-top: 50px;
     text-align: center;
-	border: solid black 4px;
+	/*border: solid black 4px;*/
 	display: inline-block;
 }
 
 #yourscore {
-	height: 100px;
-	width: 400px;
+	height: 55px;
+	width: 563px;
 	border: solid black 4px;
 	display: inline-block;
-	
+	margin-right: 125px;
+	margin-top: 11px;
+	background-color: #310586;
+	color: antiquewhite;
+    font-size: 40px;
+    padding-top: 9px;
+
 }
 
 #playagain {
-	height: 100px;
-	width: 400px;
+	height: 84px;
+	width: 151px;
 	border: solid black 4px;
 	display: inline-block;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background-color: antiquewhite;
+	text-align: center;
+    vertical-align: top;
+    font-weight: 900;
+    font-size: 33px;
 }

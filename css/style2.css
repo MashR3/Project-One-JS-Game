@@ -151,8 +151,8 @@
 	position: fixed;
 	height: 56px;
 	width: 56px;
-	margin-bottom: 114px;
-	margin-left: 185px;
+    margin-bottom: 73px;
+    margin-left: 125px;
 	margin-top: 5px;
 	display: inline-block;
 	background-image: url(../images/turtflap.png);
@@ -163,7 +163,7 @@
 	position: fixed;
 	height: 61px;
 	width: 80px;
-	margin-bottom: 121px;
+	margin-bottom: 81px;
 	margin-left: 663px;
 	display: inline-block;
 	background-image: url(../images/crabrf.png);
