@@ -1,0 +1,80 @@
+#win-screen {
+	background-image: url(../images/riv.png);
+	background-repeat-y: no-repeat;
+	background-position-y: bottom;  
+	background-color: #99e9f6;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 755px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+
+
+#win-text {
+	height: 230px;
+	width: 1000px;
+	border: solid black 4px;
+	text-align: center;
+	display: inline-block;
+}
+
+.ctext {
+	text-align: center;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+}
+
+#winpiccont {
+	width: 1000px;
+	height: 270px;
+	border: solid black 4px;
+	display: inline-block;
+}
+
+#winturt {
+	height: 257px;
+    width: 113px;
+    margin-right: 225px;
+    margin-left: 200px;
+	border: solid black 4px;
+	display: inline-block;
+	background-image: url(../images/turtthumb.png);
+	background-size: cover;
+}
+
+#wincrab {
+	height: 214px;
+    width: 250px;
+	border: solid black 4px;
+	display: inline-block;
+	background-image: url(../images/crabend.png);
+	background-size: cover;
+}
+
+
+#winbot {
+	height: 133px;
+    width: 1000px;
+    margin-top: 50px;
+    text-align: center;
+	border: solid black 4px;
+	display: inline-block;
+}
+
+#yourscore {
+	height: 100px;
+	width: 400px;
+	border: solid black 4px;
+	display: inline-block;
+	
+}
+
+#playagain {
+	height: 100px;
+	width: 400px;
+	border: solid black 4px;
+	display: inline-block;
+}

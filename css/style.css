@@ -3,10 +3,20 @@ body {
 }
 
 p {
-	font-size: 20px;
+	font-size: 18px;
 	padding-left: 17px;
     padding-right: 17px;
     text-align: justify;
+    margin-right: 11px;
+}
+
+h2 {
+	margin-bottom: 0;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 35px;
+    color: #c31010;
 }
 
 h3 {
@@ -16,10 +26,12 @@ h3 {
 
 ul {
 	margin-top: 16px;
+	margin-right: 11px;
 }
 
 li {
 	font-size: 18px;
+    margin-right: 11px;
 }
 
 h6 {

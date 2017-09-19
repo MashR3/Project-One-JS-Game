@@ -3,6 +3,9 @@ $(function (){
 var introScreen = $('#instcont').show();
 var endScreen = $('#death-screen').hide();
 var oneScreen = $('#levelone').hide();
+var winScreen = $('#win-screen').show();
+
+
 var $gameScore = 0;
 var $scoreDigit = $('#score');
 var $prog = $('.prog');

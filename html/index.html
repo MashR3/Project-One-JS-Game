@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/style2.css">
 	<link rel="stylesheet" type="text/css" href="../css/styledeath.css">
+	<link rel="stylesheet" type="text/css" href="../css/stylewin.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
 		
 		<ul>
 			<li>1. On your turn you'll be given a clue and a number. The number tells you how many clues on the board relate to that clue</li>
-			<li>2. You can keep clicking as long as you guess correctly! If you take a wrong turn and click a neutral yellow card, Collin will move ahead. Click a red card, you fall into a trap and are delayed! Collin will move twice!</li>
+			<li>2. You can keep clicking as long as you guess correctly! If you take a wrong turn and click a neutral yellow card, Tobey gets lost and Collin will move ahead. Click a red card, you fall into a trap and are delayed! Collin will move twice!</li>
 			<li>3. Click a green: points +1. Click a red: points -1. Click a yellow word: no effect on your score.</li>
 			<li>4. If you are unsure, you can choose to end your turn. You will be given a new clue, and Collin will make his move.</li>
 			<li>5. Beware, some clues may lead you to already visited locations! And some traps may be deadlier than others!</li>
@@ -117,9 +118,23 @@
 
 
 <!-- WINNING SCREEN -->
-<div id="win-screen">
+<div id="win-screen" class="win-screen">
+	<div id="win-text">
+		<h2>YOU WON!</h2>
+		<p class ="ctext">"Glad all that speedy scuttling shook off spell of the cactus juice!"</p>
+		<p class = "ctext">"Yeah... Sorry about the attempted murder"</p>
+		<p class="ctext">"It's cool dude"</p>
+	</div>
 
+	<div id="winpiccont">
+		<div id="winturt"></div>
+		<div id="wincrab"></div>
+	</div>
 
+	<div id="winbot">
+		<div id="yourscore"></div>
+		<div id="playagain"></div>
+	</div>
 
 
 
