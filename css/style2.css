@@ -159,7 +159,7 @@
 	background-image: url(../images/turtflap.png);
 	background-size: cover;
 	-webkit-animation-duration: 0.7s;
-	-webkit-animation-delay: 0s;
+	-webkit-animation-delay: 0.35s;
 	-webkit-animation-iteration-count: infinite;
 }
 
@@ -205,27 +205,6 @@
 	border-radius: 35px;
 	margin-top: 6px;
 }
-
-/*
-.board2 {
-	border: solid transparent 4px;
-	margin: 0 auto;
-	height: 426px;
-	width: 946px;
-	border-radius: 35px;
-	margin-top: 6px;
-    margin-bottom: -15px;
-}
-
-.board3 {
-	border: solid transparent 4px;
-	margin: 0 auto;
-	height: 426px;
-	width: 946px;
-	border-radius: 35px;
-	margin-top: 6px;*/
-/*    margin-bottom: -15px;*/
-/*}*/
 
 #leveltwo {
 	background-color: #cb6b08;

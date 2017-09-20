@@ -54,9 +54,6 @@ $(function (){
 	clueChoose();
 
 
-
-
-
 // ----------------------------------------------------------------------------------------------------
 $('.correct').one('click', function(event){
 	$(this).css({
@@ -67,12 +64,6 @@ $('.correct').one('click', function(event){
 	$oneScore = $oneScore + 1;
 	displayScore();
 });
-
-// function blah () {
-// 	'I have stuff in here'
-// }
-
-// $('.correct').one('click', blah)
 
 $('.correct').one('click', function(event){
 	$prog.animate({ width:'+=100px'})
@@ -119,6 +110,9 @@ $('.death').one('click', function(event){
 		backgroundColor: 'black',
 		color: 'white'
 	})
+
+	$('.death').one('click').addClass('fadeOut');
+
 	if (currentLevel === 1) {
 			death('#levelone');
 
@@ -189,10 +183,23 @@ function dScreenScore () {
 }
 // -------------------------------------------------------------------------------------------------------------
 function clueChoose () {
-	var randClue = Math.floor(Math.random()*lOneArray.length);
-	var returnClue = lOneArray[randClue];
+	if (currentLevel === 1) {
+			var randClue = Math.floor(Math.random()*lOneArray.length);
+			var returnClue = lOneArray[randClue];
+			lOneArray.splice(randClue, 1);
 
-	lOneArray.splice(randClue, 1);
+		} else if (currentLevel === 2) {
+			var randClue = Math.floor(Math.random()*lTwoArray.length);
+			var returnClue = lTwoArray[randClue];
+			lTwoArray.splice(randClue, 1);
+			
+
+		} else if (currentLevel ===3) {
+			var randClue = Math.floor(Math.random()*lThreeArray.length);
+			var returnClue = lThreeArray[randClue];
+			lThreeArray.splice(randClue, 1);
+		}
+
 	$('.clue').html(returnClue);
 	return returnClue
 }
@@ -250,43 +257,9 @@ function checkBar () {
 		}
 
 		dScreenScore();
-
 	}
-
-
 }
-
-
-
 // ----------------------------------------------------------------------------------------------------------------
-// function levOneWin () {
-// 	$('#levelone').fadeOut(1500, function(){
-// 	    $('#instcont').hide();
-// 		$('#death-screen').hide();
-// 		$('#win-screen').hide();
-// 		$('#leveltwo').show();
-// 		$('#levelthree').hide();
-// 		$prog.animate({ width:'0px'})
-// 		redcount = 1;
-// 		greencount = 0;
-
-// 	});
-// }
-
-// function levTwoWin () {
-// 	$('#levelone').fadeOut(1500, function(){
-// 	    $('#instcont').hide();
-// 	    $('#levelone').hide();
-// 		$('#death-screen').hide();
-// 		$('#win-screen').hide();
-// 		$('#levelthree').show();
-// 		$prog.animate({ width:'0px'})
-// 		redcount = 1;
-// 		greencount = 0;
-
-// 	});
-// }
-
 function levelWin (hide, show) {
 	$(hide).fadeOut(1500, function () {
 		$('#instcont').hide();
@@ -294,11 +267,11 @@ function levelWin (hide, show) {
 		$(show).show();
 		$prog.animate({ width:'0px'})
 		currentLevel ++;
+		clueChoose();
 		redcount = 1;
 		greencount = 0;
 	})
 }
-
 // -----------------------------------------------------------------------------------------------------------------
 function restart() {
 	var introScreen = $('#instcont').show();
@@ -306,8 +279,6 @@ function restart() {
 	var endScreen = $('#death-screen').hide();
 	var twoScreen = $('#leveltwo').hide();
 	var threeScreen = $('#levelthree').hide();
-
-
 	location.reload();
 }
 //------------------------------------------------------------------------------------------------------------------
@@ -315,33 +286,28 @@ function yourScore () {
 	$('#yourscore').html('YOUR FINAL SCORE IS:   ' + $oneScore + '!');
 }
 
-// ------------------------------------------------------------------------------------------------------------------
-// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-// ALL THE LEVEL TWO!!!!!
+// ANIMATIONS -----------------------------------------------------------------------------------------------
+
+var intval = null;
+var pos = 0;
+
+$(document).ready(function() {
+    intval = window.setInterval(moveBg, 10);
+});
+
+function moveBg() {
+    pos++;
+    $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
+}
 
 
-
-
-// function goToLevelTwo () {
-
-// }
-
-// MOVING BACKGROUND -----------------------------------------------------------------------------------------------
-
-// var intval = null;
-// var pos = 0;
-
-// $(document).ready(function() {
-
-
-//     intval = window.setInterval(moveBg, 10);
-// });
-
-// function moveBg() {
-    
-//     pos++;
-    
-//     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
-// }
+$(".button1").hover(
+  function () {
+    $(this).addClass('animated shake');
+  }, 
+  function () {
+    $(this).removeClass('animated shake');
+  }
+  );
 
 });

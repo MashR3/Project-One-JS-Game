@@ -10,9 +10,6 @@
 	margin: 0 auto;
 }
 
-
-
-
 #win-text {
 	height: 230px;
 	width: 1000px;
@@ -84,4 +81,8 @@
     vertical-align: top;
     font-weight: 900;
     font-size: 33px;
+}
+
+.titwin {
+	font-size: 90px
 }

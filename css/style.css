@@ -1,6 +1,5 @@
 body {
-	background-color: black
-
+	background-color: black;
 }
 
 p {
@@ -33,6 +32,7 @@ ul {
 li {
 	font-size: 18px;
     margin-right: 11px;
+    text-align: justify;
 }
 
 h6 {
@@ -56,6 +56,7 @@ h6 {
 	background-repeat-y: no-repeat;
 	background-position-y: bottom;  
 	margin-top: 27px;
+	cursor: url(../images/mg.png), auto;
 }
 
 #instcont {
