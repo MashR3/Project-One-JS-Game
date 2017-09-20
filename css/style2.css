@@ -8,7 +8,7 @@
 	margin-top: 27px;
 }
 
-#clue {
+.clue {
 	border: solid #673ab7 8px;
 	margin: 0 auto;
     margin-top: 22px;
@@ -24,7 +24,7 @@
     padding-left: 28px;
 }
 
-#clear {
+.clear {
 	border: solid black 4px;
 	height: 40px;
 	width: 82px;
@@ -35,7 +35,7 @@
     background-color: red;
 }
 
-#endturn {
+.endturn {
 	border: solid black 4px;
 	background-color: aliceblue;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -54,7 +54,7 @@
 	width: 131px;
 }
 
-#score {
+.score {
 	border: solid black 4px;
 	display: inline-block;
 	height: 61px;
@@ -72,7 +72,7 @@
     border-radius: 50%;
 }
 
-#token {
+.token {
 	background-image: url(../images/turtmad.png);
 	background-color: #00aeef;
 	background-size: cover;
@@ -90,7 +90,7 @@
     text-align: center;
 }
 
-#board {
+.board {
 	border: solid transparent 4px;
 	margin: 0 auto;
 	height: 426px;
@@ -194,4 +194,55 @@
     width: 100px;
    	background-color: red;
     border-radius: 50px;
+}
+
+
+.board {
+	border: solid transparent 4px;
+	margin: 0 auto;
+	height: 426px;
+	width: 946px;
+	border-radius: 35px;
+	margin-top: 6px;
+}
+
+/*
+.board2 {
+	border: solid transparent 4px;
+	margin: 0 auto;
+	height: 426px;
+	width: 946px;
+	border-radius: 35px;
+	margin-top: 6px;
+    margin-bottom: -15px;
+}
+
+.board3 {
+	border: solid transparent 4px;
+	margin: 0 auto;
+	height: 426px;
+	width: 946px;
+	border-radius: 35px;
+	margin-top: 6px;*/
+/*    margin-bottom: -15px;*/
+/*}*/
+
+#leveltwo {
+	background-color: #cb6b08;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 755px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 27px;
+}
+
+#levelthree {
+	background-color: #acd1df;
+	border: solid red 4px;
+	border-radius: 50px;
+	height: 755px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 27px;
 }

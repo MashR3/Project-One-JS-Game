@@ -7,7 +7,7 @@ $(function (){
 	var twoScreen = $('#leveltwo').hide();
 	var threeScreen = $('#levelthree').hide();
 	var $oneScore = 0;
-	var $scoreDigit = $('#score');
+	var $scoreDigit = $('.score');
 	var $prog = $('.prog');
 	var $comprog = $('.comprog');
 	var redcount = 1;
@@ -119,11 +119,20 @@ $('.death').one('click', function(event){
 		backgroundColor: 'black',
 		color: 'white'
 	})
-	death();
+	if (currentLevel === 1) {
+			death('#levelone');
+
+		} else if (currentLevel === 2) {
+			death('#leveltwo');
+
+		} else if (currentLevel ===3) {
+			death('#levelthree');
+		}
+
 	dScreenScore();
 })
 // ---------------------------------------------------------------------------------------------------------------
-$('#endturn').on('click', function(event){
+$('.endturn').on('click', function(event){
 	compAdvance();
 	redcount ++;
 	clueChoose();
@@ -141,7 +150,7 @@ $('#startgame').on('click', function(){
 
 })
 // ---------------------------------------------------------------------------------------------------------------
-$('#clear').on('click', function(){
+$('.clear').on('click', function(){
 	restart();
 })
 //----------------------------------------------------------------------------------------------------------------
@@ -184,7 +193,7 @@ function clueChoose () {
 	var returnClue = lOneArray[randClue];
 
 	lOneArray.splice(randClue, 1);
-	$('#clue').html(returnClue);
+	$('.clue').html(returnClue);
 	return returnClue
 }
 // --------------------------------------------------------------------------------------------------------------
