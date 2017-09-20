@@ -53,9 +53,9 @@ $(function (){
 
 	clueChoose();
 
-
 // ----------------------------------------------------------------------------------------------------
 $('.correct').one('click', function(event){
+	playSound('../sounds/correct.wav');
 	$(this).css({
 		borderColor: '#010d01',
 		backgroundColor:'#4ed453'
@@ -69,9 +69,10 @@ $('.correct').one('click', function(event){
 	$prog.animate({ width:'+=100px'})
 	greencount ++;
 	checkBar();
-})
+});
 // -------------------------------------------------------------------------------------------------------------------
 $('.incorrect').one('click', function(event){
+	playSound('../sounds/glass.mp3');
 	$(this).css({
 		borderColor: 'red',
 		backgroundColor: '#c12c2c'
@@ -90,9 +91,10 @@ $('.incorrect').one('click', function(event){
 	$comprog.animate({ width:'+=100px'})
 	redcount += 2;
 	checkBar();	
-})
+});
 // -----------------------------------------------------------------------------------------------------------------
 $('.neutral').one('click', function(event){
+	playSound('../sounds/trap.mp3');
 	$(this).css({
 		borderColor: '#66480a',
 		backgroundColor: '#e9bc80'
@@ -101,9 +103,10 @@ $('.neutral').one('click', function(event){
 	setTimeout(compAdvance, 1000);
 	clueChoose();
 	checkBar();
-})
+});
 // -------------------------------------------------------------------------------------------------------------
 $('.death').one('click', function(event){
+	playSound('../sounds/BigExplosion.mp3');
 	$(this).css({
 		borderColor: 'white',
 		backgroundColor: 'black',
@@ -123,17 +126,17 @@ $('.death').one('click', function(event){
 		}
 
 	dScreenScore();
-})
+});
 // ---------------------------------------------------------------------------------------------------------------
 $('.endturn').on('click', function(event){
 	compAdvance();
 	redcount ++;
 	clueChoose();
-})
+});
 // ---------------------------------------------------------------------------------------------------------------
 $('#restart').on('click', function(event){
 	restart();
-})
+});
 // ---------------------------------------------------------------------------------------------------------------
 $('#startgame').on('click', function(){
 	var introScreen = $('#instcont').hide();
@@ -141,15 +144,15 @@ $('#startgame').on('click', function(){
 	var endScreen = $('#death-screen').hide();
 	var twoScreen = $('#leveltwo').hide();
 
-})
+});
 // ---------------------------------------------------------------------------------------------------------------
 $('.clear').on('click', function(){
 	restart();
-})
+});
 //----------------------------------------------------------------------------------------------------------------
 $('#playagain').on('click', function(){
 	restart();
-})
+});
 // ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
 function displayScore () {
 	$scoreDigit.html($oneScore);
@@ -169,17 +172,17 @@ function displayScore () {
 			backgroundColor: 'antiquewhite'
 		})
 	}
-}
+};
 // ------------------------------------------------------------------------------------------------------------
 function death (lev) {
 	$(lev).fadeOut(2000, function(){
 		$('#death-screen').show();
 	});
-}
+};
 // -------------------------------------------------------------------------------------------------------------
 function dScreenScore () {
 	$('#dscore').html('YOUR FINAL SCORE IS:    ' + $oneScore + '!');
-}
+};
 // -------------------------------------------------------------------------------------------------------------
 function clueChoose () {
 	if (currentLevel === 1) {
@@ -201,7 +204,7 @@ function clueChoose () {
 
 	$('.clue').html(returnClue);
 	return returnClue
-}
+};
 // --------------------------------------------------------------------------------------------------------------
 function compAdvance () {
 	if (currentLevel === 1) {
@@ -226,8 +229,7 @@ function compAdvance () {
 	}
 	
 	$ele.eq($rbox).removeClass('incorrect');
-
-}
+};
 // ----------------------------------------------------------------------------------------------------------------
 function checkBar () {
 	if (greencount === 9) {
@@ -239,6 +241,7 @@ function checkBar () {
 
 		} else if (currentLevel ===3) {
 			levelWin('#levelthree', '#win-screen');
+			playSound('../sounds/winScreen.mp3')
 		}
 
 		yourScore();
@@ -257,7 +260,7 @@ function checkBar () {
 
 		dScreenScore();
 	}
-}
+};
 // ----------------------------------------------------------------------------------------------------------------
 function levelWin (hide, show) {
 	$(hide).fadeOut(1500, function () {
@@ -271,7 +274,7 @@ function levelWin (hide, show) {
 		redcount = 1;
 		greencount = 0;
 	})
-}
+};
 // -----------------------------------------------------------------------------------------------------------------
 function restart() {
 	var introScreen = $('#instcont').show();
@@ -280,13 +283,19 @@ function restart() {
 	var twoScreen = $('#leveltwo').hide();
 	var threeScreen = $('#levelthree').hide();
 	location.reload();
-}
+};
 //------------------------------------------------------------------------------------------------------------------
 function yourScore () {
 	$('#yourscore').html('YOUR FINAL SCORE IS:   ' + $oneScore + '!');
-}
+};
+// -----------------------------------------------------------------------------------------------------------------
+function playSound(path) {
+    var sound = document.createElement('audio');
+    sound.setAttribute('src', path);
+    sound.play();
+};
 
-// ANIMATIONS -----------------------------------------------------------------------------------------------
+// ANIMATIONS ------------------------------------------------------------------------------------------------------
 
 var intval = null;
 var pos = 0;
@@ -298,7 +307,7 @@ $(document).ready(function() {
 function moveBg() {
     pos++;
     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
-}
+};
 
 
 $(".button1").hover(
@@ -307,7 +316,6 @@ $(".button1").hover(
   }, 
   function () {
     $(this).removeClass('animated shake');
-  }
-  );
+  });
 
 });
