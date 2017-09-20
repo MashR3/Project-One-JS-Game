@@ -6,19 +6,13 @@ $(function (){
 	var oneScreen = $('#levelone').hide();
 	var twoScreen = $('#leveltwo').hide();
 	var threeScreen = $('#levelthree').hide();
-
-	// var totalScore = $('#yourscore');
 	var $oneScore = 0;
 	var $scoreDigit = $('#score');
 	var $prog = $('.prog');
 	var $comprog = $('.comprog');
-
 	var redcount = 1;
-	var redcount2 = 1;
-	var redcount3 = 1;
 	var greencount = 0;
-	var greencount2 = 0;
-	var greencount3 =0;
+	var currentLevel = 1;
 
 	var lOneArray = [
 		'Zodiac: 2',
@@ -74,6 +68,12 @@ $('.correct').one('click', function(event){
 	displayScore();
 });
 
+// function blah () {
+// 	'I have stuff in here'
+// }
+
+// $('.correct').one('click', blah)
+
 $('.correct').one('click', function(event){
 	$prog.animate({ width:'+=100px'})
 	greencount ++;
@@ -95,6 +95,8 @@ $('.incorrect').one('click', function(event){
 });
 
 $('.incorrect').one('click', function(event){
+	console.log($comprog.width())
+
 	$comprog.animate({ width:'+=100px'})
 	redcount += 2;
 	checkBar();	
@@ -167,16 +169,9 @@ function displayScore () {
 	}
 }
 // ------------------------------------------------------------------------------------------------------------
-function death () {
-	$('#levelone').fadeOut(2000, function(){
-	    var introScreen = $('#instcont').hide();
-	    var oneScreen = $('#levelone').hide();
-		var endScreen = $('#death-screen').show();
-		var winScreen = $('#win-screen').hide();
-		var twoScreen = $('#leveltwo').hide();
-		var threeScreen = $('#levelthree').hide();
-
-
+function death (lev) {
+	$(lev).fadeOut(2000, function(){
+		$('#death-screen').show();
 	});
 }
 // -------------------------------------------------------------------------------------------------------------
@@ -194,42 +189,107 @@ function clueChoose () {
 }
 // --------------------------------------------------------------------------------------------------------------
 function compAdvance () {
-	var $ele = $('.incorrect');
+	if (currentLevel === 1) {
+		var $ele = $('#levelone .incorrect');
+	} else if (currentLevel === 2) {
+		var $ele = $('#leveltwo .incorrect');
+	} else if (currentLevel ===3) {
+		var $ele = $('#levelthree .incorrect')
+	}
+
 	var $rbox = Math.floor(Math.random()*($ele.length - 1));
+	
+	if ($comprog.width() < 900) {
+		$comprog.animate({ width:'+=100px'});
 
-	$comprog.animate({ width:'+=100px'});
-	$ele.eq($rbox).css({
-		borderColor: 'red',
-		backgroundColor: '#c12c2c'
-	})
+		$ele.eq($rbox).css({
+			borderColor: 'red',
+			backgroundColor: '#c12c2c'
+		})
 
+		$ele.eq($rbox).off('click');
+	}
+	
 	$ele.eq($rbox).removeClass('incorrect');
+
 }
 // ----------------------------------------------------------------------------------------------------------------
 function checkBar () {
 	if (greencount === 9) {
-		levOneWin();
+		if (currentLevel === 1) {
+			levelWin('#levelone', '#leveltwo');
+
+		} else if (currentLevel === 2) {
+			levelWin('#leveltwo', '#levelthree');
+
+		} else if (currentLevel ===3) {
+			levelWin('#levelthree', '#win-screen');
+		}
+
 		yourScore();
+
 	} else if (redcount >= 9) {
-		death();
+
+		if (currentLevel === 1) {
+			death('#levelone');
+
+		} else if (currentLevel === 2) {
+			death('#leveltwo');
+
+		} else if (currentLevel ===3) {
+			death('#levelthree');
+		}
+
 		dScreenScore();
+
 	}
+
+
 }
+
+
+
 // ----------------------------------------------------------------------------------------------------------------
-function levOneWin () {
-	$('#levelone').fadeOut(1500, function(){
-	    var introScreen = $('#instcont').hide();
-	    var oneScreen = $('#levelone').hide();
-		var endScreen = $('#death-screen').hide();
-		var winScreen = $('#win-screen').hide();
-		var twoScreen = $('#leveltwo').show();
-		var threeScreen = $('#levelthree').hide();
+// function levOneWin () {
+// 	$('#levelone').fadeOut(1500, function(){
+// 	    $('#instcont').hide();
+// 		$('#death-screen').hide();
+// 		$('#win-screen').hide();
+// 		$('#leveltwo').show();
+// 		$('#levelthree').hide();
+// 		$prog.animate({ width:'0px'})
+// 		redcount = 1;
+// 		greencount = 0;
 
-		var redcount = 1;
-		var greencount = 0;
+// 	});
+// }
 
-	});
+// function levTwoWin () {
+// 	$('#levelone').fadeOut(1500, function(){
+// 	    $('#instcont').hide();
+// 	    $('#levelone').hide();
+// 		$('#death-screen').hide();
+// 		$('#win-screen').hide();
+// 		$('#levelthree').show();
+// 		$prog.animate({ width:'0px'})
+// 		redcount = 1;
+// 		greencount = 0;
+
+// 	});
+// }
+
+function levelWin (hide, show) {
+	$(hide).fadeOut(1500, function () {
+		$('#instcont').hide();
+		$('#win-screen').hide();
+		$(show).show();
+		$prog.animate({ width:'0px'})
+		currentLevel ++;
+		redcount = 1;
+		greencount = 0;
+	})
 }
+
 // -----------------------------------------------------------------------------------------------------------------
 function restart() {
 	var introScreen = $('#instcont').show();
