@@ -5,17 +5,20 @@ $(function (){
 	var winScreen = $('#win-screen').hide();
 	var oneScreen = $('#levelone').hide();
 	var twoScreen = $('#leveltwo').hide();
-	// var threeScreen = $('#levelthree').hide(); 
+	var threeScreen = $('#levelthree').hide();
 
 	// var totalScore = $('#yourscore');
-	var $gameScore = 0;
+	var $oneScore = 0;
 	var $scoreDigit = $('#score');
 	var $prog = $('.prog');
 	var $comprog = $('.comprog');
+
 	var redcount = 1;
 	var redcount2 = 1;
+	var redcount3 = 1;
 	var greencount = 0;
 	var greencount2 = 0;
+	var greencount3 =0;
 
 	var lOneArray = [
 		'Zodiac: 2',
@@ -67,7 +70,7 @@ $('.correct').one('click', function(event){
 		backgroundColor:'#4ed453'
 	})
 
-	$gameScore = $gameScore + 1;
+	$oneScore = $oneScore + 1;
 	displayScore();
 });
 
@@ -83,7 +86,7 @@ $('.incorrect').one('click', function(event){
 		backgroundColor: '#c12c2c'
 	})
 
-	$gameScore = $gameScore - 1;
+	$oneScore = $oneScore - 1;
 	displayScore();
 	$(this).removeClass('incorrect');
 
@@ -145,14 +148,14 @@ $('#playagain').on('click', function(){
 })
 // ---------------------------------------- FUNCTIONS FUNCTIONS FUNCTIONS ----------------------------------------
 function displayScore () {
-	$scoreDigit.html($gameScore);
+	$scoreDigit.html($oneScore);
 
-	if ((parseInt($gameScore)) > 0) {
+	if ((parseInt($oneScore)) > 0) {
 		$scoreDigit.css({
 			backgroundColor: '#4ed453'
 		})
 
-	} else if ((parseInt($gameScore)) < 0) {
+	} else if ((parseInt($oneScore)) < 0) {
 		$scoreDigit.css({
 			backgroundColor: 'red'
 		})
@@ -171,12 +174,14 @@ function death () {
 		var endScreen = $('#death-screen').show();
 		var winScreen = $('#win-screen').hide();
 		var twoScreen = $('#leveltwo').hide();
+		var threeScreen = $('#levelthree').hide();
+
 
 	});
 }
 // -------------------------------------------------------------------------------------------------------------
 function dScreenScore () {
-	$('#dscore').html('YOUR FINAL SCORE IS:    ' + $gameScore + '!');
+	$('#dscore').html('YOUR FINAL SCORE IS:    ' + $oneScore + '!');
 }
 // -------------------------------------------------------------------------------------------------------------
 function clueChoose () {
@@ -203,7 +208,7 @@ function compAdvance () {
 // ----------------------------------------------------------------------------------------------------------------
 function checkBar () {
 	if (greencount === 9) {
-		winner();
+		levOneWin();
 		yourScore();
 	} else if (redcount >= 9) {
 		death();
@@ -211,13 +216,15 @@ function checkBar () {
 	}
 }
 // ----------------------------------------------------------------------------------------------------------------
-function winner () {
+function levOneWin () {
 	$('#levelone').fadeOut(1500, function(){
 	    var introScreen = $('#instcont').hide();
 	    var oneScreen = $('#levelone').hide();
 		var endScreen = $('#death-screen').hide();
 		var winScreen = $('#win-screen').hide();
 		var twoScreen = $('#leveltwo').show();
+		var threeScreen = $('#levelthree').hide();
+
 		var redcount = 1;
 		var greencount = 0;
 
@@ -229,12 +236,14 @@ function restart() {
 	var oneScreen = $('#levelone').hide();
 	var endScreen = $('#death-screen').hide();
 	var twoScreen = $('#leveltwo').hide();
+	var threeScreen = $('#levelthree').hide();
+
 
 	location.reload();
 }
 //------------------------------------------------------------------------------------------------------------------
 function yourScore () {
-	$('#yourscore').html('YOUR FINAL SCORE IS:   ' + $gameScore + '!');
+	$('#yourscore').html('YOUR FINAL SCORE IS:   ' + $oneScore + '!');
 }
 
 // ------------------------------------------------------------------------------------------------------------------
