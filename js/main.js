@@ -86,7 +86,6 @@ $('.incorrect').one('click', function(event){
 });
 
 $('.incorrect').one('click', function(event){
-	console.log($comprog.width())
 
 	$comprog.animate({ width:'+=100px'})
 	redcount += 2;
@@ -266,6 +265,7 @@ function levelWin (hide, show) {
 		$('#win-screen').hide();
 		$(show).show();
 		$prog.animate({ width:'0px'})
+		$comprog.animate({width:'100px'})
 		currentLevel ++;
 		clueChoose();
 		redcount = 1;
