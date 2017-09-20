@@ -295,17 +295,17 @@ function playSound(path) {
 };
 
 // --------------------------------------------- ANIMATIONS ---------------------------------------------------------
-var intval = null;
-var pos = 0;
+// var intval = null;
+// var pos = 0;
 
-$(document).ready(function() {
-    intval = window.setInterval(moveBg, 10);
-});
+// $(document).ready(function() {
+//     intval = window.setInterval(moveBg, 10);
+// });
 
-function moveBg() {
-    pos++;
-    $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
-};
+// function moveBg() {
+//     pos++;
+//     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
+// };
 // ------------------------------------------------------------------------------------------------------------------
 $(".button1").hover(
   function () {

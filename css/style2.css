@@ -3,7 +3,7 @@
 	border: solid red 4px;
 	border-radius: 50px;
 	height: 755px;
-	width: 1000px;
+	width: 1250px;
 	margin: 0 auto;
 	margin-top: 27px;
 }
@@ -22,6 +22,7 @@
     color: antiquewhite;
     font-size: 52px;
     padding-left: 28px;
+    letter-spacing: 3px;
 }
 
 .clear {
@@ -149,12 +150,12 @@
 }
 
 #turt {
-	position: fixed;
+	position: relative;
 	height: 56px;
 	width: 56px;
-    margin-bottom: 73px;
-    margin-left: 125px;
-	margin-top: 5px;
+    /*margin-bottom: 73px;*/
+    margin-left: 306px;
+	margin-top: 11px;
 	display: inline-block;
 	background-image: url(../images/turtflap.png);
 	background-size: cover;
@@ -164,11 +165,11 @@
 }
 
 #crab {
-	position: fixed;
+	position: relative;
 	height: 61px;
 	width: 80px;
-	margin-bottom: 81px;
-	margin-left: 663px;
+	/*margin-bottom: 81px;*/
+	margin-left: 419px;
 	display: inline-block;
 	background-image: url(../images/crabrf.png);
 	background-size: cover;
@@ -184,7 +185,7 @@
 	width: 900px;
 	border-radius: 50px;
 	background: beige;
-	margin-top: 20px;
+	margin-top: 10px;
 	text-align: center;
 	font-size: 50px;
 }
@@ -203,6 +204,7 @@
 	width: 946px;
 	border-radius: 35px;
 	margin-top: 6px;
+	margin-left: 56px;
 }
 
 #leveltwo {
@@ -223,4 +225,28 @@
 	width: 1000px;
 	margin: 0 auto;
 	margin-top: 27px;
+}
+
+
+.boardcont {
+	display: inline-flex;
+}
+
+
+
+.prevClue {
+	display: inline-block;
+    width: 208px;
+    height: 424px;
+    /*border: solid white 4px;*/
+    margin-top: 14px;
+}
+
+.clueHold {
+	display: inline-block;
+    width: 174px;
+    height: 35.5px;
+    background-color: #1d0d5a;
+    border: solid #673ab7 3px;
+    margin-left: 5px;
 }
