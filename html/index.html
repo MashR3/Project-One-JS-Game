@@ -28,9 +28,9 @@
 		<ul>
 			<li>1. On your turn you'll be given a clue and a number. The number tells you how many clues on the board relate to that clue. Be Careful! You may have already clicked it!!</li>
 			<li>2. You can keep clicking as long as you guess correctly! If you take a wrong turn and click a neutral yellow card, Toby gets lost and Collin will move ahead. Click a red card, you fall into a trap and are delayed! Collin will move twice!</li>
-			<li>3. Click a green: points +1. Click a red: points -1. Click a beige word: no effect on your score.</li>
+			<li>3. Click a green: points +1. Click a red: points -1. Click a beige word: no effect on your score. Sometimes, an extra clue will pop up if you pick up on his trail and choose correctly!</li>
 			<li>4. If you are unsure, you can choose to end your turn. You will be given a new clue, and Collin will make his move.</li>
-			<li>5. Try to fill Toby's bar before Collin to progress! Also beware, some clues may lead you to already visited locations! And some traps may be DEADLIER than others!</li>
+			<li>5. Try to fill Toby's bar before Collin does to progress! Also beware, some clues may lead you to already visited locations! And some traps may be DEADLIER than others!</li>
 		</ul> 	
 		<div id="startgame">START!</div>
 	</div>
@@ -43,20 +43,23 @@
 <!-- LEVEL ONE -->
 <div id="levelone" class="page">
 	<div class="token"></div>
+	<div class="speech">
+		<h5>"I have to catch Collin!"</h5>
+	</div>
 	<div class="clue"></div>
 	<div class="clear">RESTART GAME</div>
 	<div class="endturn">END TURN</div>
 	<div class="score"></div>
 	<div class="boardcont">
 		<div class="board animated bounceInDown">	
-			<div id="c1" class="button1 correct">FLUTE</div>
-			<div id="c2" class="button1 correct">FRAME</div>
-			<div id="c3" class="button1 correct">CLOCK</div>
+			<div id="c1" data-clue="note" data-qty="2" class="button1 correct">FLUTE</div>
+			<div id="c2" data-clue="time" data-qty="2" class="button1 correct">FRAME</div>
+			<div id="c3" data-clue="wooden" data-qty="3" class="button1 correct">CLOCK</div>
 			<div id="n1" class="button1 neutral">CARROT</div>
 			<div id="i1" class="button1 incorrect">MOUSE</div>
-			<div id="c4" class="button1 correct">GARDEN</div>
-			<div id="c5" class="button1 correct">GLOW</div>
-			<div id="c6" class="button1 correct">CHINA</div>
+			<div id="c4" data-clue="worm" data-qty="2" class="button1 correct">GARDEN</div>
+			<div id="c5" data-clue="lantern" data-qty="2" class="button1 correct">GLOW</div>
+			<div id="c6" data-clue="zodiac" data-qty="2" class="button1 correct">CHINA</div>
 			<div id="n2" class="button1 neutral">DISH</div>
 			<div id="n3" class="button1 neutral">CORAL</div>
 			<div id="d1" class="button1 death">POLE</div>
@@ -64,11 +67,11 @@
 			<div id="i3" class="button1 incorrect">AIR</div>
 			<div id="i4" class="button1 incorrect">BELT</div>
 			<div id="i5" class="button1 incorrect">REEF</div>
-			<div id="c7" class="button1 correct">BAG</div>
-			<div id="c8" class="button1 correct">DOG</div>
+			<div id="c7" data-clue="tricks" data-qty="2" class="button1 correct">BAG</div>
+			<div id="c8" data-clue="bone" data-qty="2" class="button1 correct">DOG</div>
 			<div id="n4" class="button1 neutral">JET</div>
 			<div id="i6" class="button1 incorrect">SAND</div>
-			<div id="c9" class="button1 correct">CASH</div>
+			<div id="c9" data-clue="carry" data-qty="2" class="button1 correct">CASH</div>
 			<div id="i7" class="button1 incorrect">BALL</div>
 			<div id="n5" class="button1 neutral">CLIP</div>
 			<div id="n6" class="button1 neutral">TOAST</div>
@@ -76,15 +79,15 @@
 			<div id="n7" class="button1 neutral">TABLET</div>
 		</div>
 		<div class="prevClue">
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
-			<div class="clueHold"></div>
+			<div class="clueHold" id="zodiac"></div>
+			<div class="clueHold" id="time"></div>
+			<div class="clueHold" id="bone"></div>
+			<div class="clueHold" id="note"></div>
+			<div class="clueHold" id="lantern"></div>
+			<div class="clueHold" id="worm"></div>
+			<div class="clueHold" id="carry"></div>
+			<div class="clueHold" id="tricks"></div>
+			<div class="clueHold" id="wooden"></div>
 		</div>
 	</div>
 	<div id="mbprog" class="mbprog">
@@ -106,36 +109,52 @@
 <!-- LEVEL TWO -->
 <div id="leveltwo" class="page">
 	<div class="token"></div>
+	<div class="speech">
+		<h5>"He scuttled away!"</h5>
+	</div>
 	<div class="clue"></div>
 	<div class="clear">RESTART GAME</div>
 	<div class="endturn">END TURN</div>
 	<div class="score"></div>
-	<div class="board animated bounceInDown">	
-		<div id="n1" class="button1 neutral">COCONUT</div>
-		<div id="c1" class="button1 correct">BUZZ</div>
-		<div id="i1" class="button1 incorrect">JIGSAW</div>
-		<div id="n2" class="button1 neutral">REPTILE</div>
-		<div id="n3" class="button1 neutral">FENCE</div>
-		<div id="n4" class="button1 neutral">EVOLUTION</div>
-		<div id="n5" class="button1 neutral">DOLL</div>
-		<div id="i2" class="button1 incorrect">DREAM</div>
-		<div id="c2" class="button1 correct">HOWL</div>
-		<div id="c3" class="button1 correct">SPEAR</div>
-		<div id="c4" class="button1 correct">WHISTLE</div>
-		<div id="i3" class="button1 incorrect">TREMOR</div>
-		<div id="n6" class="button1 neutral">BALLERINA</div>
-		<div id="d1" class="button1 death">SMOKE</div>
-		<div id="c5" class="button1 correct">CORN</div>
-		<div id="i4" class="button1 incorrect">FIREWORK</div>
-		<div id="i5" class="button1 incorrect">ORANGE</div>
-		<div id="c6" class="button1 correct">BREATH</div>
-		<div id="i6" class="button1 incorrect">OVEN</div>
-		<div id="i7" class="button1 incorrect">SPAIN</div>
-		<div id="c7" class="button1 correct">EEL</div>
-		<div id="i8" class="button1 incorrect">CASINO</div>
-		<div id="c8" class="button1 correct">WHALE</div>
-		<div id="n7" class="button1 neutral">BRAIN</div>
-		<div id="c9" class="button1 correct">BALLOON</div>
+	<div class="boardcont">
+		<div class="board animated bounceInDown">	
+			<div id="n1" class="button1 neutral">COCONUT</div>
+			<div id="cc1" data-clue="ear" data-qty="2" class="button1 correct">BUZZ</div>
+			<div id="i1" class="button1 incorrect">JIGSAW</div>
+			<div id="n2" class="button1 neutral">REPTILE</div>
+			<div id="n3" class="button1 neutral">FENCE</div>
+			<div id="n4" class="button1 neutral">EVOLUTION</div>
+			<div id="n5" class="button1 neutral">DOLL</div>
+			<div id="i2" class="button1 incorrect">DREAM</div>
+			<div id="cc2" data-clue="puppy" data-qty="2" class="button1 correct">HOWL</div>
+			<div id="cc3" data-clue="harpoon" data-qty="2" class="button1 correct">SPEAR</div>
+			<div id="cc4" data-clue="wolf" data-qty="2" class="button1 correct">WHISTLE</div>
+			<div id="i3" class="button1 incorrect">TREMOR</div>
+			<div id="n6" class="button1 neutral">BALLERINA</div>
+			<div id="d1" class="button1 death">SMOKE</div>
+			<div id="cc5" data-clue="pop" data-qty="2" class="button1 correct">CORN</div>
+			<div id="i4" class="button1 incorrect">FIREWORK</div>
+			<div id="i5" class="button1 incorrect">ORANGE</div>
+			<div id="cc6" data-clue="mint" data-qty="2" class="button1 correct">BREATH</div>
+			<div id="i6" class="button1 incorrect">OVEN</div>
+			<div id="i7" class="button1 incorrect">SPAIN</div>
+			<div id="cc7" data-clue="electric" data-qty="2" class="button1 correct">EEL</div>
+			<div id="i8" class="button1 incorrect">CASINO</div>
+			<div id="cc8" data-clue="ocean" data-qty="2" class="button1 correct">WHALE</div>
+			<div id="n7" class="button1 neutral">BRAIN</div>
+			<div id="cc9" data-clue="blow" data-qty="4" class="button1 correct">BALLOON</div>
+		</div>
+		<div class="prevClue">
+			<div class="clueHold" id="wolf"></div>
+			<div class="clueHold" id="mint"></div>
+			<div class="clueHold" id="electric"></div>
+			<div class="clueHold" id="pop"></div>
+			<div class="clueHold" id="blow"></div>
+			<div class="clueHold" id="harpoon"></div>
+			<div class="clueHold" id="ear"></div>
+			<div class="clueHold" id="ocean"></div>
+			<div class="clueHold" id="puppy"></div>
+		</div>
 	</div>
 	<div id="mbprog" class="mbprog">
 		<div id="prog" class="prog"></div>
@@ -156,36 +175,52 @@
 <!-- LEVEL THREE -->
 <div id="levelthree" class="page">
 	<div class="token"></div>
+	<div class="speech">
+		<h5>"I think I'm closing in!"</h5>
+	</div>
 	<div class="clue"></div>
 	<div class="clear">RESTART GAME</div>
 	<div class="endturn">END TURN</div>
 	<div class="score"></div>
-	<div class="board animated bounceInDown">	
-		<div id="i1" class="button1 incorrect">BULB</div>
-		<div id="c1" class="button1 correct">BOWL</div>
-		<div id="i2" class="button1 incorrect">BABY</div>
-		<div id="n1" class="button1 neutral">TIME</div>
-		<div id="c2" class="button1 correct">HUNGER</div>
-		<div id="c3" class="button1 correct">SEASON</div>
-		<div id="i3" class="button1 incorrect">JEANS</div>
-		<div id="d1" class="button1 death">SNAIL</div>
-		<div id="c4" class="button1 correct">BIBLE</div>
-		<div id="n2" class="button1 neutral">JACKET</div>
-		<div id="d2" class="button1 death">HINGE</div>
-		<div id="d3" class="button1 death">HARBOR</div>
-		<div id="n3" class="button1 neutral">LIBRARY</div>
-		<div id="i4" class="button1 incorrect">BUD</div>
-		<div id="c5" class="button1 correct">NAIL</div>
-		<div id="c6" class="button1 correct">FOOD</div>
-		<div id="i5" class="button1 incorrect">RULER</div>
-		<div id="n4" class="button1 neutral">GRASS</div>
-		<div id="c7" class="button1 correct">ROCK</div>
-		<div id="i6" class="button1 incorrect">CUP</div>
-		<div id="n5" class="button1 neutral">SQUARE</div>
-		<div id="i7" class="button1 incorrect">JAIL</div>
-		<div id="c8" class="button1 correct">OXFORD</div>
-		<div id="i8" class="button1 incorrect">STICK</div>
-		<div id="c9" class="button1 correct">INDEX</div>
+	<div class="boardcont">
+		<div class="board animated bounceInDown">	
+			<div id="i1" class="button1 incorrect">BULB</div>
+			<div id="ccc1" data-clue="roll" data-qty="2" class="button1 correct">BOWL</div>
+			<div id="i2" class="button1 incorrect">BABY</div>
+			<div id="n1" class="button1 neutral">TIME</div>
+			<div id="ccc2" data-clue="strike" data-qty="2" class="button1 correct">HUNGER</div>
+			<div id="ccc3" data-clue="taste" data-qty="2" class="button1 correct">SEASON</div>
+			<div id="i3" class="button1 incorrect">JEANS</div>
+			<div id="d1" class="button1 death">SNAIL</div>
+			<div id="ccc4" data-clue="cross" data-qty="2" class="button1 correct">BIBLE</div>
+			<div id="n2" class="button1 neutral">JACKET</div>
+			<div id="d2" class="button1 death">HINGE</div>
+			<div id="d3" class="button1 death">HARBOR</div>
+			<div id="n3" class="button1 neutral">LIBRARY</div>
+			<div id="i4" class="button1 incorrect">BUD</div>
+			<div id="ccc5" data-clue="finger" data-qty="3" class="button1 correct">NAIL</div>
+			<div id="ccc6" data-clue="fast" data-qty="2" class="button1 correct">FOOD</div>
+			<div id="i5" class="button1 incorrect">RULER</div>
+			<div id="n4" class="button1 neutral">GRASS</div>
+			<div id="ccc7" data-clue="fall" data-qty="2" class="button1 correct">ROCK</div>
+			<div id="i6" class="button1 incorrect">CUP</div>
+			<div id="n5" class="button1 neutral">SQUARE</div>
+			<div id="i7" class="button1 incorrect">JAIL</div>
+			<div id="ccc8" data-clue="study" data-qty="2" class="button1 correct">OXFORD</div>
+			<div id="i8" class="button1 incorrect">STICK</div>
+			<div id="ccc9" data-clue="dictionary" data-qty="2" class="button1 correct">INDEX</div>
+		</div>
+		<div class="prevClue">
+			<div class="clueHold" id="finger"></div>
+			<div class="clueHold" id="dictionary"></div>
+			<div class="clueHold" id="study"></div>
+			<div class="clueHold" id="cross"></div>
+			<div class="clueHold" id="fast"></div>
+			<div class="clueHold" id="strike"></div>
+			<div class="clueHold" id="roll"></div>
+			<div class="clueHold" id="fall"></div>
+			<div class="clueHold" id="taste"></div>
+		</div>
 	</div>
 	<div id="mbprog" class="mbprog">
 		<div id="prog" class="prog"></div>

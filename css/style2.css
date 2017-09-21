@@ -17,7 +17,7 @@
 	margin-bottom: 14px;
 	display: inline-block;
 	margin-right: 15px;
-    margin-left: 15px;
+    margin-left: 8px;
     background-color: #1d0d5a;
     color: antiquewhite;
     font-size: 52px;
@@ -77,12 +77,12 @@
 	background-image: url(../images/turtmad.png);
 	background-color: #00aeef;
 	background-size: cover;
-	border: solid black 4px;
+	border: solid black 6px;
 	display: inline-block;
 	height: 66px;
 	width: 64px;
 	margin: 0 auto;
-	margin-left: 60px;
+	margin-left: 51px;
     margin-top: 22px;
     margin-bottom: 14px;
     font-size: 50px;
@@ -212,7 +212,7 @@
 	border: solid red 4px;
 	border-radius: 50px;
 	height: 755px;
-	width: 1000px;
+	width: 1250px;
 	margin: 0 auto;
 	margin-top: 27px;
 }
@@ -222,23 +222,19 @@
 	border: solid red 4px;
 	border-radius: 50px;
 	height: 755px;
-	width: 1000px;
+	width: 1250px;
 	margin: 0 auto;
 	margin-top: 27px;
 }
-
 
 .boardcont {
 	display: inline-flex;
 }
 
-
-
 .prevClue {
 	display: inline-block;
     width: 208px;
     height: 424px;
-    /*border: solid white 4px;*/
     margin-top: 14px;
 }
 
@@ -249,4 +245,17 @@
     background-color: #1d0d5a;
     border: solid #673ab7 3px;
     margin-left: 5px;
+    text-align: center;
+    color: #c8a7a4;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.speech {
+	color: black;
+	background-color: antiquewhite;
+	display: inline-block;
+	width: 238px;
+	height: 40px;
+	border: solid black 6px;
 }

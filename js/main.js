@@ -156,12 +156,12 @@ $('#playagain').on('click', function(){
 function displayScore () {
 	$scoreDigit.html($oneScore);
 
-	if ((parseInt($oneScore)) > 0) {
+	if (parseInt($oneScore) > 0) {
 		$scoreDigit.css({
 			backgroundColor: '#4ed453'
 		})
 
-	} else if ((parseInt($oneScore)) < 0) {
+	} else if (parseInt($oneScore) < 0) {
 		$scoreDigit.css({
 			backgroundColor: 'red'
 		})
@@ -295,17 +295,17 @@ function playSound(path) {
 };
 
 // --------------------------------------------- ANIMATIONS ---------------------------------------------------------
-// var intval = null;
-// var pos = 0;
+var intval = null;
+var pos = 0;
 
-// $(document).ready(function() {
-//     intval = window.setInterval(moveBg, 10);
-// });
+$(document).ready(function() {
+    intval = window.setInterval(moveBg, 10);
+});
 
-// function moveBg() {
-//     pos++;
-//     $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
-// };
+function moveBg() {
+    pos++;
+    $(".page").css({backgroundPosition: (pos * -5) + "px 460px"});
+};
 // ------------------------------------------------------------------------------------------------------------------
 $(".button1").hover(
   function () {
@@ -314,5 +314,19 @@ $(".button1").hover(
   function () {
     $(this).removeClass('animated shake');
   });
+
+
+// --------------------------------------------------------ADDITIONAL--------------------------------------------------
+$('.button1').one('click', function (e) {
+	var $this = $(this);
+	var rnd = Math.random();
+
+	if (rnd < .35) {
+		var clueName = $this.data('clue');
+		var qty = $this.data('qty');
+		$('#' + clueName).html(clueName + ': ' + qty);
+	}
+});
+
 
 });
