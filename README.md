@@ -33,6 +33,7 @@ The following were used in the building of this project:
 ## Screenshots 
 
 Screenshot folder in the Github repository: 
+[Still Images from the game](link)
 
 ## Usage
 ####Building and Running

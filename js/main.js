@@ -328,5 +328,4 @@ $('.button1').one('click', function (e) {
 	}
 });
 
-
 });
