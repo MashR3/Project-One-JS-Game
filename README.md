@@ -36,9 +36,9 @@ Screenshot folder in the Github repository:
 [Still images from the game](https://github.com/MashR3/Project-One-JS-Game/tree/master/screenshots)
 
 ## Usage
-####Building and Running
+#### Building and Running
 
 Fork/clone this repository, and edit index.html. 
 
-####Customising 
+#### Customising 
 Modification can be achieved by directly accessing and changing the contents of the HTML, CSS, of JavaScript files, available in the repository.
